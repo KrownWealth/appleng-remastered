@@ -1,0 +1,114 @@
+:root{
+  --nav-text: rgba(255, 255, 255, .8);
+  
+  --nav-text-secondary: #E8E8ED;
+  --nav-text-hover: #FFFFFF;
+  --blue: #2997ff;
+  --purple: #a972ff;
+  --mx-teal: #43B9B9;
+  --gradient: linear-gradient(97deg, #0096FF, #BB64FF 42%, #F2416B 74%, #EB7500);
+  --dropdown-menu-opened-light: #fafafc;
+  --dropdown-menu-opened-dark: #161617;
+  --dropdown-submenu-header-color: rgb(134, 134, 139);
+  --gradient-border: linear-gradient(45deg, #004E82, #074DD0 50%, #4B00B9);
+  --gradient-border-size: 0px;
+  --gradient-border-fade-start: 0px;
+  --gradient-border-fade-end: 120px;
+}
+
+.pro-text {
+  user-select: auto;
+  animation: fadein 2s ease-out forwards;
+  opacity: 0;
+  font-size: 28px;
+  line-height: 1.4;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+   z-index: 30; /* Ensures it is ABOVE the neon text */
+  position: relative;
+}
+
+.neonText {
+  display: block;
+  width: 824px;
+  height: 378px;
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.dropdown-menu{
+  background-color: var(--dropdown-menu-opened-dark);
+}
+.dropdown-menu h3{
+  font-size: 12px;
+  color: var(--dropdown-submenu-header-color);
+}
+.dropdown-menu li{
+  font-size: 24px;
+  padding-bottom: -6px;
+  transition: color .32s cubic-bezier(.4,0,.6,1);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* performace section */
+
+.performance-section {
+  position: relative;
+  margin-top: 4rem;
+  background: black;
+  border-radius: 48px;
+  box-shadow: 
+    inset 0 0 20px rgba(0, 0, 0, 0.8),
+    inset 0 0 5.9px rgba(255, 255, 255, 0.7);
+  /* Mimicking the spreadRadius: 5.9 and blurRadius: 20.0 from the Flutter code */
+}
+
+.performance-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-border);
+  border-radius: 48px;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.performance-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 48px;
+  background: rgba(255, 255, 255, 0.07); /* Mimicking white70 from Flutter */
+  filter: blur(5.9px); /* Matching the spreadRadius */
+  z-index: 2;
+}
+
+.performance-section:nth-child(2)::before,
+.performance-section:nth-child(2)::after{
+   background: linear-gradient(45deg, #004E82, #074DD0 50%, #4B00B9);
+}
+
+.border-top {
+  position: relative;
+}
+
+.border-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,#0088ff,#692fff,#c1498a);
+
+  
+}
+
+
