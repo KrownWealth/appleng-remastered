@@ -16,6 +16,8 @@
   --gradient-border-fade-end: 120px;
 }
 
+
+
 .pro-text {
   user-select: auto;
   animation: fadein 2s ease-out forwards;
@@ -59,41 +61,61 @@
 
 /* performace section */
 
-.performance-section {
-  position: relative;
-  margin-top: 4rem;
-  background: black;
-  border-radius: 48px;
-  box-shadow: 
-    inset 0 0 20px rgba(0, 0, 0, 0.8),
-    inset 0 0 5.9px rgba(255, 255, 255, 0.7);
-  /* Mimicking the spreadRadius: 5.9 and blurRadius: 20.0 from the Flutter code */
+.performace-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 4rem; */
+    background: black;
+	background-blend-mode: multiply
 }
 
-.performance-section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-border);
-  border-radius: 48px;
-  opacity: 0.1;
-  z-index: 1;
+@property --a {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false
 }
 
-.performance-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 48px;
-  background: rgba(255, 255, 255, 0.07); /* Mimicking white70 from Flutter */
-  filter: blur(5.9px); /* Matching the spreadRadius */
-  z-index: 2;
+.performance-card {
+	overflow: hidden;
+	position: relative;
+	
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	border-radius: 28px;
+	padding: 20px;
+    z-index: 1;
 }
 
-.performance-section:nth-child(2)::before,
-.performance-section:nth-child(2)::after{
-   background: linear-gradient(45deg, #004E82, #074DD0 50%, #4B00B9);
+.performance-card::before {
+	position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	border: solid 1.25em;
+    filter: blur(.75em);
+	border-image-source: conic-gradient(
+		from var(--a),
+		#004E82, #074DD0, #4B00B9,
+		#004E82, #074DD0, #4B00B9,
+		#074DD0, #004E82, #074DD0, #4B00B9, #074DD0
+	);
+	border-image-slice: 1;
+    box-shadow: 0 0 120px 0 #074DD0 inset;
+    background: #000;
+    opacity: .4;
+	
 }
+.performance-card::after{
+      mix-blend-mode: multiply;
+    background: linear-gradient(45deg, #004E82, #074DD0 50%, #4B00B9);
+}
+
 
 .border-top {
   position: relative;
@@ -107,8 +129,98 @@
   right: 0;
   height: 1px;
   background: linear-gradient(90deg,#0088ff,#692fff,#c1498a);
-
-  
 }
 
 
+
+.card-glow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    background: black;
+	background-blend-mode: multiply;
+ 
+}
+
+@property --a {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false
+}
+
+
+
+.card {
+	overflow: hidden;
+	position: relative;
+    max-width: min(calc(100vw - 40px), 1260px);
+     padding-block-start: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	border-radius: 28px;
+  padding-top: 200px;
+	text-align: center;
+    z-index: 1;
+}
+
+.card::before {
+	content: "";
+	position: absolute;
+  width: 100%;
+  height: 100%; 
+  top: 50%;
+  left: 50%;
+    transform: translate(-50%, -50%);
+	border: solid .35em;
+  filter: blur(7px);
+	background: linear-gradient(to bottom right, #0894FF 0%, #C959DD 34%, #FF2E54 68%, #FF9004);
+	-webkit-mask: 
+		linear-gradient(#fff 0 0) content-box, 
+		linear-gradient(#fff 0 0);
+	mask: 
+		linear-gradient(#fff 0 0) content-box, 
+		linear-gradient(#fff 0 0);
+   box-shadow:  0 0 120px 0 linear-gradient(to bottom right, #0894FF 0%, #C959DD 34%, #FF2E54 68%, #FF9004) inset;;
+    opacity: .4;
+	mask-composite: exclude;
+	border-radius: 28px;
+}
+
+.card:after {
+    background-size: calc(100% + 14px);
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, #0894FF 0%, #C959DD 34%, #FF2E54 68%, #FF9004)
+     50% / calc(100% + 14px) calc(100% + 14px);
+    border-radius: 28px;
+    border: 3px solid rgba(0, 0, 0, 0);
+    mask: linear-gradient(hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0)), linear-gradient(hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    mask-clip: padding-box, border-box;
+    mask-composite: intersect;
+
+}
+
+
+.ai-gradient-text {
+    background: #f5f5f7;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(to bottom right, #0894FF 0%, #C959DD 34%, #FF2E54 68%, #FF9004);
+
+}
+
+
+.padding-block{
+  padding-block: 130px 200px;
+}
+
+.inset-inline-start{
+inset-inline-start: calc(50% - 74px / 2);;
+}

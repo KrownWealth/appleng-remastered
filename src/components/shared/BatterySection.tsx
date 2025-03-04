@@ -14,15 +14,16 @@ const BatterySection = () => {
 
   return (
     <section className="w-full mx-auto py-52 bg-black">
-      <div className="max-w-[692px] mx-auto">
-        <h2 className="font-sf text-[rgb(245,245,247)] text-xl font-semibold uppercase mb-8 leading-5 tracking-[-0.02em]">
+      <div className="w-full md:w-[692px] lg:w-[760px] mx-auto relative">
+        <h2 className="font-sf text-[rgb(245,245,247)] text-xl font-semibold uppercase mb-12 leading-5 tracking-[-0.02em]">
           Battery
         </h2>
-        <p className="text-4xl md:text-[64px] font-sf font-semibold text-[#f5f5f7] pb-10 leading-5 tracking-[-0.01em]">
+        <p className="text-4xl md:text-[64px] lg:text-[80px] font-sf font-semibold 
+        text-[#f5f5f7] leading-5 tracking-[-0.01em] pb-12">
           We can do this all day.
-
         </p>
-        <p className="text-4xl md:text-[64px] font-sf font-semibold text-[#f5f5f7] pb-10 leading-5 tracking-[-0.01em]"> And night.</p>
+        <p className="text-4xl md:text-[64px] font-sf font-semibold text-[#f5f5f7] 
+        pb-10 leading-5 tracking-[-0.01em] "> And night.</p>
       </div>
       <motion.div
         ref={ref}

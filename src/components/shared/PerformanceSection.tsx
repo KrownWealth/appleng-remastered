@@ -15,13 +15,25 @@ const PerformanceSection = () => {
 
       <section className="performance-section ">
         {/* Content container */}
-        <div className="relative z-10">
-          <picture>
-            <source srcSet="/images/performance-ms-mobile.jpg" type="image/jpg" media="(max-width: 734px)" />
-            <source srcSet="/images/performance-ms-desktop.jpg" type="image/jpg" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance.jpg" type="image/jpg" media="(min-width: 0)" />
-            <img src="/images/performance.jpg" alt="M4 Chip" className="w-full rounded-[48px]" />
-          </picture>
+        <div className="performance-card max-w-7xl mx-auto">
+          <div>
+            <video
+              role="img" preload="none"
+              muted
+              playsInline
+              data-inline-media
+              src="/video/large-shadow-trasparet.mp4"
+            >
+
+            </video>
+            <picture>
+              <source srcSet="/images/performance-ms-mobile.jpg" type="image/jpg" media="(max-width: 734px)" />
+              <source srcSet="/images/performance-ms-desktop.jpg" type="image/jpg" media="(max-width: 1068px)" />
+              <source srcSet="/images/performance.jpg" type="image/jpg" media="(min-width: 0)" />
+              <img src="/images/performance.jpg" alt="M4 Chip" className="w-full" />
+            </picture>
+          </div>
+
         </div>
       </section>
 

@@ -1,19 +1,18 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselApi } from "../ui/carousel";
 
 const tabs = [
-  { id: "coding", label: "Coding", image: "/images/carousel/carousel-1.jpg" },
-  { id: "photo-editing", label: "Photo editing", image: "/images/carousel/carousel-2.jpg" },
+  { id: "xcode", label: "Coding", image: "/images/carousel/carousel-1.jpg" },
+  { id: "photo-editing", label: "Photo Editing", image: "/images/carousel/carousel-2.jpg" },
   { id: "stem", label: "STEM", image: "/images/carousel/carousel-3.jpg" },
   { id: "business", label: "Business", image: "/images/carousel/carousel-4.jpg" },
   { id: "graphic-design", label: "Graphic design", image: "/images/carousel/carousel-5.jpg" },
-  { id: "6d", label: "6D", image: "/images/carousel/carousel-6.jpg" },
-  { id: "7d", label: "7D", image: "/images/carousel/carousel-7.jpg" },
-  { id: "8d", label: "8D", image: "/images/carousel/carousel-8.jpg" },
-  { id: "9d", label: "9D", image: "/images/carousel/carousel-9.jpg" },
-  { id: "10d", label: "10D", image: "/images/carousel/carousel-10.jpg" },
+  { id: "3d-animation-and-design", label: "3D animation and design", image: "/images/carousel/carousel-6.jpg" },
+  { id: "music-production", label: "Music production", image: "/images/carousel/carousel-7.jpg" },
+  { id: "video-editing", label: "Video editing", image: "/images/carousel/carousel-8.jpg" },
+  { id: "gaming", label: "Gaming", image: "/images/carousel/carousel-9.jpg" },
 ];
 
 export default function HorizontalScroll() {
@@ -21,18 +20,18 @@ export default function HorizontalScroll() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-
-  // Log the current active tab index
   useEffect(() => {
     if (!api) { return; }
 
     setCurrentIndex(api.selectedScrollSnap());
 
-
     api.on("select", () => {
       setCurrentIndex(api.selectedScrollSnap());
     });
   }, [api]);
+
+  const hasPrevious = currentIndex > 0;
+  const hasNext = currentIndex < tabs.length - 1;
 
   return (
     <Carousel
@@ -42,16 +41,16 @@ export default function HorizontalScroll() {
         align: "start",
         loop: true,
       }}
-      className="w-full mt-20 overflow-x-hidden"
+      className="w-full mt-20 "
     >
       {/* Tab Content */}
-      <CarouselContent className="gap-8 mx-auto max-w-4xl">
+      <CarouselContent className="gap-16 mx-auto max-w-4xl">
         <AnimatePresence>
           {tabs.map((tab, index) => (
             <CarouselItem
               key={tab.id}
-              className={`md:basis-1/2 lg:basis-[80%] gap-10 relative`}
-              style={{ opacity: currentIndex === index ? 1 : 0.5 }}
+              className={`md:basis-1/2 lg:basis-[100%]`}
+              style={{ opacity: currentIndex === index ? 1 : 0.4 }}
             >
               <motion.div
                 role="tabpanel"
@@ -89,27 +88,30 @@ export default function HorizontalScroll() {
                   </div>
                 </div>
               </motion.div>
-              <span className="mt-2 me-3 text-textGray text-xs text-center flex justify-end lowercase">{tab.label}</span>
+              <span className="mt-2 me-3 text-textGray text-sm text-center flex justify-end lowercase">{tab.label}</span>
             </CarouselItem>
           ))}
         </AnimatePresence>
       </CarouselContent>
 
-      <div className="relative py-16 max-w-3xl mx-auto">
-        <CarouselPrevious />
-
-        {/* <CarouselPrevious onClick={handlePrevious}>
-          <ChevronLeft className="h-6 w-6 text-white" />
-        </CarouselPrevious> */}
+      <div className="relative pt-16 max-w-4xl mx-auto flex items-center">
+        {hasPrevious && <CarouselPrevious />}
 
         {/* Tab Navigation */}
-        <nav aria-label="Tabs" className="relative flex justify-start gap-8 text-lg mt-10 h-[3em] whitespace-nowrap overflow-x-auto scrollbar-hide">
-          <ul className="flex gap-8 pb-2">
+        <ScrollArea className="whitespace-nowrap border-b border-r border-textGray pb-6 flex-1"
+          style={{
+            borderLeft: hasPrevious ? "1px solid #E0E0E0" : "none",
+            borderRight: hasNext ? "1px solid #E0E0E0" : "none"
+          }}>
+          <ul className="flex gap-8 w-max">
             {tabs.map((tab, index) => (
               <li
                 key={tab.id}
                 onClick={() => api?.scrollTo(index)}
-                className={`relative px-1 transition-colors border-b ${currentIndex === index ? "text-white border-textGray" : "text-gray-400 hover:text-gray-300 border-transparent"}`}
+                className={`relative px-1 transition-colors text-2xl
+                  ${currentIndex === index ? "text-white border-textGray" :
+                    "text-gray-400 hover:text-gray-300 border-transparent"
+                  }`}
                 role="tab"
                 aria-selected={currentIndex === index}
                 aria-controls={`${tab.id}-panel`}
@@ -119,9 +121,10 @@ export default function HorizontalScroll() {
               </li>
             ))}
           </ul>
-        </nav>
-        <CarouselNext />
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
 
+        {hasNext && <CarouselNext />}
       </div>
     </Carousel>
   );
