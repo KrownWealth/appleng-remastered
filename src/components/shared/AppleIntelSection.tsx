@@ -6,11 +6,7 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 const AppleIntelSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px 0px -100px 0px" });
-
-  // Use the scroll hook to track scroll position
   const { scrollY } = useScroll();
-
-  // Transform scroll position into scale value
   const scale = useTransform(scrollY, [0, 200], [0.9, 1.1]);
 
   return (

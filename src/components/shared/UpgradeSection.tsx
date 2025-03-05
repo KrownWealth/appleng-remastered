@@ -62,36 +62,37 @@ const UpgradeSection = () => {
       </div>
 
       <div className="md:w-[692px] lg:w-[700px] mx-auto relative">
-
-        <section className="grid sm:grid-cols-4 sm:grid-rows-2 gap-5">
+        <div className="grid grid-cols-4 gap-5">
           {/* First Card - Larger (1 column, 2 rows) */}
-          <div className="sm:col-span-2 sm:row-span-2">
+          <div className="col-span-2 row-span-2">
             <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
-              <img className="object-cover h-full w-full rounded-md" src="https://images.unsplash.com/photo-1686918101049-d7fc95087424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1370&q=80" alt="Card Content 1" />
+              <img className="object-cover h-full w-full rounded-md"
+                src="https://images.unsplash.com/photo-1686918101049-d7fc95087424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1370&q=80" alt="Card Content 1" />
             </div>
           </div>
 
           {/* Second Card - Smaller (1 column, 1 row) */}
-          <div className="sm:col-span-1 sm:row-span-1">
+          <div className="col-span-1 row-span-2">
             <div className="aspect-square bg-muted rounded-md flex items-center justify-center">
-              <img className="object-cover h-full w-full rounded-md" src="https://images.unsplash.com/photo-1648614593495-e0955bf287e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Card Content 2" />
+              <img className="object-cover h-full w-full rounded-md"
+                src="https://images.unsplash.com/photo-1648614593495-e0955bf287e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Card Content 2" />
             </div>
           </div>
 
           {/* Third Card - Smaller (1 column, 1 row) */}
-          <div className="sm:col-span-1 sm:row-span-1">
+          <div className="col-span-1 row-span-2">
             <div className="aspect-square bg-muted rounded-md flex items-center justify-center">
               <img className="object-cover h-full w-full rounded-md" src="https://images.unsplash.com/photo-1687812693663-c322b9af62a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Card Content 3" />
             </div>
           </div>
 
           {/* Fourth Card - Larger (1 column, 2 rows) */}
-          <div className="sm:col-span-2 sm:row-span-1">
+          <div className="col-span-2 row-span-1">
             <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
               <img className="object-cover h-full w-full rounded-md" src="https://images.unsplash.com/photo-1685980201821-6577f4feec1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Card Content 4" />
             </div>
           </div>
-        </section>
+        </div>
 
       </div>
 
