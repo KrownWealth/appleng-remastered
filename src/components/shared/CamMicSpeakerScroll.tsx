@@ -4,7 +4,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "../ui/caro
 
 
 
-export default function AppleIntellScroll() {
+export default function CamMicSpeakerScroll() {
   const [api, setApi] = useState<CarouselApi>();
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
@@ -82,21 +82,14 @@ export default function AppleIntellScroll() {
 
 const slides = [
   {
-    title: "Writing Tools",
-    img: "/images/apple-intel/slide-1.jpg",
-    description:
-      "Writing Tools can proofread your text and rewrite different versions until the tone and wording are just right, and summarize selected text with a click.",
+    title: "Center Stage",
+    img: "/images/micspeaker-1.jpg",
+    description: "Center Stage keeps you centered in the frame as you move around."
   },
   {
-    title: "Siri",
-    img: "/images/apple-intel/slide-2.jpg",
-    description:
-      "With an all-new design, richer language understanding, and the ability to type to Siri whenever it's convenient for you, communicating with Siri is more natural than ever.",
+    title: "Desk View ",
+    img: "/images/micspeaker-2.jpg",
+    description: "Desk View lets you share your workspace, adding a whole new dimension to make your video calls more engaging."
   },
-  {
-    title: "Priority Message",
-    img: "/images/apple-intel/slide-3.jpg",
-    description:
-      "Get time-sensitive messages at the top of your inbox, like an invitation for a meeting in an hour or a reminder to check in for your flight. And Mail helps you summarize messages in a snap.",
-  },
+
 ];

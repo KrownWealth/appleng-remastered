@@ -186,7 +186,7 @@ const PerformanceSection = () => {
       </section>
 
 
-      <div className="flex justify-center">
+      <div className="flex justify-center sticky">
         <button className="flex items-center justify-center gap-4 bg-applengGray px-4 py-4 rounded-full shadow-[inset_0_0_1px_rgba(232,232,237,0.11)]">
           <span className="text-white text-sm font-medium"> Go deeper on the M4 chip </span>
           <div className="bg-blue-500 rounded-full p-1"> <Plus className="w-4 h-4 text-applengGray" /></div>
