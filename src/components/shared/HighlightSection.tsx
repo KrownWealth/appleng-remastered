@@ -68,7 +68,7 @@ export default function Highlights() {
 
 
   return (
-    <div className="w-full relative min-h-screen bg-applengGray py-24 md:py-52">
+    <section className="w-full relative min-h-screen bg-applengGray py-24 md:py-52">
       <SectionHeading title="Get the highlights." />
       <div className="relative overflow-hidden">
         <Carousel
@@ -150,6 +150,6 @@ export default function Highlights() {
         </Carousel>
       </div>
 
-    </div>
+    </section>
   );
 }

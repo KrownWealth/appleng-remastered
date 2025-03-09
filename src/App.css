@@ -94,7 +94,7 @@
 .performance-card {
   overflow: hidden;
   position: relative;
-
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,12 +121,14 @@
   box-shadow: 0 0 120px 0 #074DD0 inset;
   background: #000;
   opacity: .4;
+  z-index: 10;
 
 }
 
 .performance-card::after {
   mix-blend-mode: multiply;
   background: linear-gradient(45deg, #004E82, #074DD0 50%, #4B00B9);
+   opacity: .3;
 }
 
 
@@ -323,4 +325,119 @@
     transform: scale(1);
     width: 100%;
     will-change: transform;
+}
+
+.section-width{
+  width: 87.5%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Mobile styles */
+.text-maximum h2{
+font-size: 19px;
+line-height: 1.2105263158;
+font-weight: 600;
+letter-spacing: .012em;
+        
+}
+
+.text-maximum p {
+font-size: 40px;
+line-height: 1.1;
+font-weight: 600;
+letter-spacing: 0em;
+}
+
+
+.performance-card {
+  border-radius: 0px;
+  padding: 5px;
+}
+
+.performance-card::before {
+ 
+  transform: translate(-50%, -50%);
+  border: solid 0.1em;
+  filter: blur(.3em);
+  box-shadow: 0 0 60px 0 #074DD0 inset;
+
+
+}
+
+
+
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  /* Tablet styles */
+.text-maximum h2{
+font-size: 21px;
+line-height: 1.1904761905;
+font-weight: 600;
+letter-spacing: .011em;
+        
+}
+.text-maximum p {
+font-size: 64px;
+line-height: 1.0625;
+font-weight: 600;
+letter-spacing: -0.009em;
+}
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Laptop styles */
+.text-maximum h2{
+font-size: 21px;
+line-height: 1.1904761905;
+font-weight: 600;
+letter-spacing: .011em;
+        
+}
+ .text-minimum p {
+font-size: 64px;
+line-height: 1.0625;
+font-weight: 600;
+letter-spacing: -0.009em;
+};
+
+.section-width{
+  width: 692px;
+}
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+  /* Desktop styles */
+.text-minimum h2{
+font-size: 21px;
+line-height: 1.19;
+letter-spacing: .011em;
+        
+}
+.text-maximum p {
+font-size: 80px;
+line-height: 1.05;
+letter-spacing: -0.015em;
+};
+.section-width{
+  width: 692px;
+}
+}
+
+@media only screen and (min-width: 1201px) {
+  /* Large screen styles */
+.text-maximum h2{
+font-size: 21px;
+line-height: 1.19;
+letter-spacing: .011em;
+        
+}
+.text-maximum p {
+font-size: 80px;
+line-height: 1.05;
+letter-spacing: -0.015em;
+}
+.section-width{
+  width: 980px;
+}
 }

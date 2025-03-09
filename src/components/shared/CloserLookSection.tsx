@@ -19,10 +19,12 @@ export default function CloserLookSection() {
   }
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center relative py-52">
-      <div className="w-full max-w-7xl mx-auto px-8">
-        <SectionHeading title="Take a closer look" />
-        <div className="relative aspect-[12/5] pt-20">
+    <section className="w-full relative min-h-screen bg-back py-24 md:py-52">
+      <SectionHeading title="Take a closer look" />
+
+      <div className="w-full md:max-w-7xl mx-auto px-6 md:px-8">
+
+        <div className="relative md:aspect-[12/4] ">
           {closerLookSlides.map((imageUrl, index) => (
             <motion.img
               key={index}
@@ -47,14 +49,15 @@ export default function CloserLookSection() {
             MacBook Pro 16" in Space Black
           </motion.h2>
 
-          <div className="flex items-center gap-4 bg-applengGray px-4 py-2 rounded-full shadow-[inset_0_0_1px_rgba(232,232,237,0.11)]">
-            
+          <div className="flex items-center gap-4 bg-white/10 px-4 py-2
+           rounded-full shadow-[inset_0_0_1px_rgba(232,232,237,0.11)]">
+
             <button
               onClick={handlePrevious}
               className="p-2 rounded-full transition-colors"
               aria-label="Previous slide"
             >
-              <ChevronLeft className="w-4 h-4 text-white" />
+              <ChevronLeft className="w-6 h-6 text-[#f5f5f5]" />
             </button>
 
             {closerLookSlides.map((_, index) => (
@@ -72,7 +75,7 @@ export default function CloserLookSection() {
               className="p-2 rounded-full transition-colors"
               aria-label="Next slide"
             >
-              <ChevronRight className="w-4 h-4 text-white" />
+              <ChevronRight className="w-6 h-6 text-white" />
             </button>
           </div>
         </div>
@@ -80,7 +83,7 @@ export default function CloserLookSection() {
         {/* Product Title */}
 
       </div>
-    </div>
+    </section>
   )
 }
 

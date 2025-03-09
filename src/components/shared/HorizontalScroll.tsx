@@ -94,7 +94,7 @@ export default function HorizontalScroll() {
         </AnimatePresence>
       </CarouselContent>
 
-      <div className="relative pt-16 max-w-4xl mx-auto flex items-center">
+      <div className="relative pt-16 w-full px-6 md:px-0 md:max-w-4xl mx-auto flex items-start md:items-center">
         {hasPrevious && <CarouselPrevious />}
 
         {/* Tab Navigation */}

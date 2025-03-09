@@ -5,7 +5,7 @@ const DifferenceSection = () => {
 
   return (
     <section className="w-full mx-auto bg-[#1d1d1f] flex flex-col items-center justify-center pt-52 pb-60">
-      <div className="mmd:w-[692px] lg:w-[700px] mx-auto relative">
+      <div className="md:w-[692px] lg:w-[700px] mx-auto relative">
         <h2 className="font-sf text-4xl md:text-[64px] lg-[80px] text-[#f5f5f7] 
         font-semibold text-center leading-[1.05] tracking-[-0.015em] ">
           Designed to make a difference.

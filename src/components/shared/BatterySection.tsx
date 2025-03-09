@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import SectionHeadingInner from "./SectionHeadingInner";
 
 const BatterySection = () => {
 
@@ -14,17 +15,8 @@ const BatterySection = () => {
 
   return (
     <section className="w-full mx-auto py-52 bg-black">
-      <div className="w-full md:w-[692px] lg:w-[760px] mx-auto relative">
-        <h2 className="font-sf text-[rgb(245,245,247)] text-xl font-semibold uppercase mb-12 leading-5 tracking-[-0.02em]">
-          Battery
-        </h2>
-        <p className="text-4xl md:text-[64px] lg:text-[80px] font-sf font-semibold 
-        text-[#f5f5f7] leading-5 tracking-[-0.01em] pb-12">
-          We can do this all day.
-        </p>
-        <p className="text-4xl md:text-[64px] font-sf font-semibold text-[#f5f5f7] 
-        pb-10 leading-5 tracking-[-0.01em] "> And night.</p>
-      </div>
+      <SectionHeadingInner chipTitle="Battery" title="We can do this all day.  And night." />
+
       <motion.div
         ref={ref}
         className="w-full py-16 overflow-hidden"
@@ -37,12 +29,12 @@ const BatterySection = () => {
           <img
             src="/images/battery-hero.jpg"
             alt="MacBook Pro with colorful keyboard lighting"
-            className="w-full h-auto object-cover"
+            className="w-full h-[600px] md:h-auto object-cover"
           />
         </picture>
       </motion.div>
 
-      <div className="max-w-[692px] mx-auto mt-32">
+      <div className="max-w-[692px] mx-auto mt-12 px-6 md:px-0">
         <p className="text-textGray font-sf text-xl font-semibold justify-start 
         text-start leading-snug tracking-[-0.011em] opacity-100 pb-10">
           The new MacBook Pro has the <span className="text-white"> longest battery life ever in a Mac </span>— up to 24 hours — and supports fast charge,
@@ -51,7 +43,7 @@ const BatterySection = () => {
           an outlet for your passion, not your laptop.
         </p>
 
-        <div className="grid grid-cols-2 gap-28 font-sf">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28 font-sf">
           {[
             { speed: '24 hrs', comparison: 'battery life', footnote: '3,6' },
             { speed: '14 more', comparison: 'hours than Intel-based MacBook Pro', footnote: '5' },
