@@ -28,7 +28,7 @@ export default function AppleIntellScroll() {
         align: "start",
         loop: true,
       }}
-      className="w-full my-20 "
+      className="w-full my-20 z-50"
     >
       {/* Tab Content */}
       <CarouselContent className="gap-16 mx-auto max-w-4xl">
@@ -60,7 +60,7 @@ export default function AppleIntellScroll() {
                  leading-[1.21] tracking-[-0.021em] 
                 ${currentIndex === index
                   ? "ai-gradient-text border-white"
-                  : "text-gray-400 hover:text-gray-300 border-transparent"
+                  : "text-gray-400 hover:ai-gradient-text border-transparent"
                 }`}
               role="tab"
               aria-selected={currentIndex === index}

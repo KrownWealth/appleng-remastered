@@ -3,7 +3,7 @@
 
 const PrivacySection = () => {
   return (
-    <section className='bg-applengGray w-full flex flex-col items-center justify-center relative padding-block'>
+    <section className='bg-applengGray w-full flex flex-col items-center justify-center relative padding-block z-[-1]'>
       <div className='flex flex-col lg:w-[980px] mx-auto items-center justify-center relative
       after:absolute after:content-[""] after:bg-applengGray after:z-[-1] after:inset-0 '>
         <div className="mb-6 block relative w-[74px] h-[104px] ">

@@ -18,7 +18,7 @@ import ExploringSection from './components/shared/ExploringSection'
 
 function App() {
   return (
-    <>
+    <main className="overflow-hidden">
       <Hero />
       <Highlights />
       <CloserLookSection />
@@ -34,7 +34,7 @@ function App() {
       <UpgradeSection />
       <DifferenceSection />
       <ExploringSection />
-    </>
+    </main>
   );
 }
 

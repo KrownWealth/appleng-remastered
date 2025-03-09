@@ -55,50 +55,126 @@ const UpgradeSection = () => {
 
         </div>
 
-        <div className="flex items-center justify-center pt-12 pb-6">
+        <div className="flex items-center justify-center pt-12 pb-10">
           <p className="text-white font-semibold text-2xl">Here&apos;s what you get with the new MacBook Pro.</p>
         </div>
 
       </div>
 
-      <div className="md:w-[692px] lg:w-[700px] mx-auto relative">
-        <div className="grid grid-cols-4 gap-5">
-          {/* First Card - Larger (1 column, 2 rows) */}
-          <div className="col-span-2 row-span-2">
-            <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
-              <img className="object-cover h-full w-full rounded-md"
-                src="https://images.unsplash.com/photo-1686918101049-d7fc95087424?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1370&q=80" alt="Card Content 1" />
+      <div className="md:w-[692px] lg:w-[900px] mx-auto relative">
+        <section
+          className="grid grid-cols-2 gap-5
+               grid-rows-[auto_auto_auto] 
+               auto-rows-min"
+          style={{
+            gridTemplateAreas: `
+        "bento-1 bento-3"
+        "bento-1 bento-4"
+        "bento-2 bento-4"
+      `,
+          }}
+        >
+          {/* First Card - Taller (2 rows) */}
+          <div className="relative min-h-[380px] w-full h-full rounded-[28px]"
+            style={{
+              gridArea: "bento-1",
+              backgroundImage: "url(/images/upgraders-intel.jpg)",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover"
+            }}
+          >
+
+            {/* Text Overlay */}
+            <div className="absolute bottom-0 inset-x-0 flex flex-col 
+            items-start justify-end rounded-[28px] px-10 pb-8">
+              <picture>
+                <source srcSet="/images/icon-macbook.png" type="image/png" media="(max-width:734px)" />
+                <source srcSet="/images/icon-macbook.png" type="image/png" media="(max-width:1068px)" />
+                <source srcSet="/images/icon-macbook.png" type="image/png" media="(max-width:0)" />
+                <img src="/images/icon-macbook.png" alt="display" className="w-[100px] h-[106px] object-cover" />
+              </picture>
+              <h2 className="text-white text-[40px] font-semibold font-sf leading-[1.1]">
+                Fly through demanding tasks up to 9.8x faster.
+                <sup className="underline">4</sup>
+              </h2>
             </div>
           </div>
 
-          {/* Second Card - Smaller (1 column, 1 row) */}
-          <div className="col-span-1 row-span-2">
-            <div className="aspect-square bg-muted rounded-md flex items-center justify-center">
-              <img className="object-cover h-full w-full rounded-md"
-                src="https://images.unsplash.com/photo-1648614593495-e0955bf287e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Card Content 2" />
+          {/* Second Card - Smaller */}
+          <div className="relative min-h-[230px]" style={{ gridArea: "bento-2" }}>
+            <div className="bg-[#1d1d1f] object-cover h-full w-full rounded-[28px]" />
+
+            {/* Text Overlay */}
+            <div className="absolute bottom-4 inset-0 flex items-center gap-8 p-10">
+              <picture>
+                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:734px)" />
+                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:1068px)" />
+                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:0)" />
+                <img src="/images/icon-xdr-display.png" alt="display" className="w-[100px] h-[106px] object-contain" />
+              </picture>
+              <div>
+                <h2 className="text-white text-[28px] font-semibold font-sf leading-[1.1] tracking-[.007em]">
+                  A stunning  <br />
+                  <span>Liquid Retina XDR</span>&nbsp;
+                  display.
+                </h2>
+              </div>
             </div>
           </div>
 
-          {/* Third Card - Smaller (1 column, 1 row) */}
-          <div className="col-span-1 row-span-2">
-            <div className="aspect-square bg-muted rounded-md flex items-center justify-center">
-              <img className="object-cover h-full w-full rounded-md" src="https://images.unsplash.com/photo-1687812693663-c322b9af62a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Card Content 3" />
+          {/* Third Card - Smaller */}
+          <div className="relative min-h-[230px] card-glow" style={{ gridArea: "bento-3" }}>
+            <div className="bg-[#1d1d1f] object-cover h-full w-full rounded-[28px] card" />
+            {/* Text Overlay */}
+            <div className="absolute bottom-4 inset-0 flex items-center justify-start space-x-4 p-10 z-50">
+              <picture>
+                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:734px)" />
+                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:1068px)" />
+                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:0)" />
+                <img src="/images/icon-apple-intelligence.png" alt="display" className="w-[100px] h-[106px] object-contain" />
+              </picture>
+              <h2 className="text-white text-[28px] font-semibold font-sf leading-[1.1] tracking-[.007em] ">
+                Built for <br />
+                <span className="ai-gradient-text">
+                  Apple Intelligence
+                </span>
+              </h2>
             </div>
+
           </div>
 
-          {/* Fourth Card - Larger (1 column, 2 rows) */}
-          <div className="col-span-2 row-span-1">
-            <div className="aspect-video bg-muted rounded-md flex items-center justify-center">
-              <img className="object-cover h-full w-full rounded-md" src="https://images.unsplash.com/photo-1685980201821-6577f4feec1a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Card Content 4" />
+          {/* Fourth Card - Taller (2 rows) */}
+          <div className="relative min-h-[380px] w-full h-full rounded-[28px]"
+            style={{
+              gridArea: "bento-4",
+              backgroundColor: "#1d1d1f",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover"
+            }}>
+
+            {/* Text Overlay */}
+            <div className="absolute bottom-0 inset-x-0 flex flex-col 
+            items-start justify-end rounded-[28px] px-10 pb-8">
+              <picture>
+                <source srcSet="/images/icon-battery-life.png" type="image/png" media="(max-width:734px)" />
+                <source srcSet="/images/icon-battery-life.png" type="image/png" media="(max-width:1068px)" />
+                <source srcSet="/images/con-battery-life.png" type="image/png" media="(max-width:0)" />
+                <img src="/images/icon-battery-life.png" alt="display" className="w-[100px] h-[106px] object-cover" />
+              </picture>
+              <h2 className="text-white text-[36px] font-semibold font-sf leading-[1.1] ">
+                Up to
+                <span className="battery-gradient-text">
+                  14 more hours
+                </span>&nbsp; battery life.5&nbsp;
+                <span className="text-textGray">(Up to 24 hours total.)
+                  <sup className="underline">6</sup>
+                </span>
+
+              </h2>
             </div>
           </div>
-        </div>
-
+        </section>
       </div>
-
-
-
-
 
 
     </section>

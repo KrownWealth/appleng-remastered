@@ -34,10 +34,10 @@
 
 .neonText {
   display: block;
-  width: 824px;
+  width: 624px;
   height: 378px;
   position: absolute;
-  top: -20px;
+  top: -34px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
@@ -45,9 +45,20 @@
   mix-blend-mode: screen;
 }
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  /* Mobile styles */
+  .neonText {
+  width: 420px;
+  height: 320px;
+   top: -75px;
+  }
+}
+
+
 .dropdown-menu {
   background-color: var(--dropdown-menu-opened-dark);
 }
+
 
 .dropdown-menu h3 {
   font-size: 12px;
@@ -176,7 +187,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   border: solid 10px;
-  filter: blur(2px);
+  filter: blur(7px);
 
   border-image-source: conic-gradient(from 45deg,
       #C959DD 0deg, #C959DD 34deg,
@@ -202,7 +213,7 @@
   opacity: .5;
   mask-composite: exclude;
   border-radius: 28px;
-  z-index: 9999;
+  /* z-index: 9999; */
 }
 
 .card::after {
@@ -237,6 +248,14 @@
   background-image: linear-gradient(97deg, #0096FF, #BB64FF 42%, #F2416B 74%, #EB7500)
 }
 
+.battery-gradient-text {
+    background: #f5f5f7;
+    background-clip: text;
+    -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    background-image: linear-gradient(90deg, #35A98A 0%, #6DD400);
+}
 
 .padding-block {
   padding-block: 130px 200px;

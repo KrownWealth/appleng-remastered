@@ -2,7 +2,7 @@
 
 export default function Footer() {
   return (
-    <footer className="w-full mx-auto flex flex-col items-center justify-center bottom-0 bg-[#1d1d1f]">
+    <footer className="w-full mx-auto flex flex-col items-center justify-center bottom-0 bg-[#1d1d1f] px-8 lg:px-0">
       <div className="mmd:w-[692px] lg:w-[700px] mx-auto relative">
         <ol className="text-textGray px-0 py-4 footer-list list-decimal">
           <li id="footnote-1">Apple&nbsp;Intelligence is available in beta on all Mac models with M1 and later, with Siri and device language set to English (Australia, Canada, Ireland, New Zealand, South Africa, UK or U.S.), as a macOS&nbsp;Sequoia software update. Additional features and languages will be available in April, with more languages coming over the course of the year. Languages supported in 2025 include Chinese, English (India, Singapore), French, German, Italian, Japanese, Korean, Portuguese, Spanish, and Vietnamese.</li>
