@@ -3,16 +3,9 @@ import { useState, useEffect } from "react";
 
 const PrivacySection = () => {
   const [showVideo, setShowVideo] = useState(true);
-
-  const [fadeOut, setFadeOut] = useState(false);
-
   useEffect(() => {
     setTimeout(() => {
-      setFadeOut(true);
-    }, 4500);
-
-    setTimeout(() => {
-      setShowVideo(false); // Hide video completely after 5 seconds
+      setShowVideo(false);
     }, 5000);
   }, []);
   return (

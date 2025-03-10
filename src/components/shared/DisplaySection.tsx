@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useInView, } from "framer-motion";
+import { motion, useInView, } from "framer-motion";
 import { Plus } from "lucide-react";
 import { useRef } from "react";
 import SectionHeadingInner from "./SectionHeadingInner";
