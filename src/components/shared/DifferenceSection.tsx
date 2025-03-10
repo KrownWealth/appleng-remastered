@@ -4,15 +4,16 @@
 const DifferenceSection = () => {
 
   return (
-    <section className="w-full mx-auto bg-[#1d1d1f] flex flex-col items-center justify-center pt-52 pb-60">
+    <section className="w-full mx-auto bg-[#1d1d1f] flex flex-col items-start justify-start
+     md:items-center md:justify-center pt-12 md:pt-52 pb-60 px-6 md:px-0">
       <div className="md:w-[692px] lg:w-[700px] mx-auto relative">
         <h2 className="font-sf text-4xl md:text-[64px] lg-[80px] text-[#f5f5f7] 
-        font-semibold text-center leading-[1.05] tracking-[-0.015em] ">
+        font-semibold text-start md:text-center leading-[1.05] tracking-[-0.015em] ">
           Designed to make a difference.
         </h2>
 
         <p className="text-textGray my-16 font-sf text-xl font-semibold
-        leading-snug tracking-[-0.011em] opacity-100 text-center px-12">
+        leading-snug tracking-[-0.011em] opacity-100 text-start md:text-center px-0 md:px-12">
           What matters to you matters to Apple, too. From using more
           recycled content that minimizes environmental impact.
           To privacy protections that give you more control over your
@@ -20,17 +21,17 @@ const DifferenceSection = () => {
         </p>
 
 
-        <div className="grid grid-cols-3 gap-16 font-sf items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-16 font-sf items-center justify-center">
           <div className="flex flex-col">
             <div className="pt-8 pb-2">
               <picture>
                 <source srcSet="/images/durale-d.png" type="image/png" media="(max-width:734px)" />
                 <source srcSet="/images/durale-d.png" type="image/png" media="(max-width:1068px)" />
                 <source srcSet="/images/durale-d.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/durale-d.png" alt="display" className=" w-12 h-12 object-contain " />
+                <img src="/images/durale-d.png" alt="display" className="w-16 h-16 md:w-12 md:h-12 object-contain " />
               </picture>
             </div>
-            <p className="text-textGray font-sf text-[17px]  font-semibold justify-start   
+            <p className="text-textGray font-sf text-[19px] md:text-[17px]  font-semibold justify-start   
             text-start leading-snug tracking-[-0.011em] opacity-100 pb-10"
             >
               MacBook Pro has a durable design, with  &nbsp;
@@ -44,11 +45,11 @@ const DifferenceSection = () => {
                 <source srcSet="/images/filefault.png" type="image/png" media="(max-width:734px)" />
                 <source srcSet="/images/filefault.png" type="image/png" media="(max-width:1068px)" />
                 <source srcSet="/images/filefault.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/filefault.png" alt="display" className=" w-12 h-12 object-contain " />
+                <img src="/images/filefault.png" alt="display" className="w-16 h-16 md:w-12 md:h-12 object-contain " />
               </picture>
             </div>
             <p
-              className="text-textGray font-sf text-[17px]  font-semibold justify-start 
+              className="text-textGray font-sf text-[19px] md:text-[17px]  font-semibold justify-start 
               text-start leading-snug tracking-[-0.011em] opacity-100 pb-10"
             >
               <span className="text-white">Privacy is a fundamental human right.</span>&nbsp;
@@ -62,11 +63,11 @@ const DifferenceSection = () => {
                 <source srcSet="/images/inlcusive.png" type="image/png" media="(max-width:734px)" />
                 <source srcSet="/images/inclusive.png" type="image/png" media="(max-width:1068px)" />
                 <source srcSet="/images/inclusive.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/inclusive.png" alt="display" className=" w-12 h-12 object-contain " />
+                <img src="/images/inclusive.png" alt="display" className="w-16 h-16 md:w-12 md:h-12 object-contain " />
               </picture>
             </div>
             <p
-              className="text-textGray font-sf text-[17px]  font-semibold justify-start 
+              className="text-textGray font-sf text-[19px] md:text-[17px]  font-semibold justify-start 
               text-start leading-snug tracking-[-0.011em] opacity-100 pb-10"
             >
 

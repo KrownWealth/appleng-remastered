@@ -3,7 +3,7 @@
 const SectionHeadingInner = ({ title, chipTitle }: { title: string, chipTitle: string }) => {
   return (
     <header className="relative w-full md:max-w-4xl mx-auto px-6">
-      <div className="w-full text-maximum">
+      <div className="w-full text-maximum ps-0 md:ps-[8.3%]">
         <h2 className='font-sf text-[#f5f5f5] font-semibold uppercase mb-[0.4em]'>
           {chipTitle}
         </h2>

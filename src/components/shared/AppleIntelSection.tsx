@@ -12,10 +12,13 @@ const AppleIntelSection = () => {
   return (
     <section className="w-full mx-auto overflow-hidden text-center relative card-glow">
       {/* Glow Gradient Applied */}
-      <div className="mx-auto card max-w-6xl">
-        <div className="relative md:w-[692px] lg:w-[980px] mx-auto">
-          <h2 className="font-sf text-4xl md:text-[64px] lg:text-[80px] font-semibold mb-4 leading-[1.05] tracking-[-0.01em]">
+      <div className="mx-auto card w-full md:max-w-6xl">
+        <div className="relative w-full md:w-[692px] lg:w-[980px] mx-auto">
+          <h2 className="font-sf hidden md:flex md:text-[64px] lg:text-[80px] font-semibold mb-4 leading-[1.05] tracking-[-0.01em]">
             <span className="ai-gradient-text">Built for Apple Intelligence</span>
+          </h2>
+          <h2 className="flex md:hidden font-sf text-[38px] font-semibold mb-4 leading-[1.05] tracking-[-0.01em] text-center items-center justify-center">
+            <span className="ai-gradient-text">Built for <br />  Apple Intelligence</span>
           </h2>
           <p className="text-[#f5f5f7] font-semibold font-sf text-4xl md:text-[64px] lg:text-[80px] max-w-[66.6%] mx-auto ms-[16.6%]">
             Genius at work.
@@ -26,7 +29,8 @@ const AppleIntelSection = () => {
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={isInView ? { opacity: 1, y: 0, scale: scale.get() } : { opacity: 0, y: 50, scale: 0.9 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mt-20 text-[#86868b] text-[21px] leading-[1.38] tracking-[-0.01em] max-w-[40rem] mx-auto"
+          className="mt-20 text-[#86868b] text-[19px] md:text-[21px] 
+          leading-[1.38] tracking-[-0.01em] w-full px-8 md:max-w-[40rem] mx-auto"
         >
           <p>
             Apple Intelligence is the personal intelligence system that helps you{" "}

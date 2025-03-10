@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
+import SectionHeadingInner from "./SectionHeadingInner";
 
 
 const PortsSection = () => {
@@ -10,21 +11,11 @@ const PortsSection = () => {
   const scale = useTransform(scrollY, [0, 200], [0.9, 1.1]);
 
   return (
-    <section ref={ref} className="w-full mx-auto pb-52 bg-black flex flex-col items-center justify-center">
-      <div className="md:w-[692px] lg:w-[980px] mx-auto relative ps-[8.3%] ">
-        <h2 className="font-sf text-[rgb(245,245,247)] text-xl font-semibold uppercase mb-2 leading-5 tracking-[-0.02em] max-w-[75%]">
-          Ports and connectivity
+    <section ref={ref} className="w-full mx-auto pb-12 md:pb-52 bg-black flex flex-col items-center justify-center">
+      <SectionHeadingInner chipTitle="Ports and connectivity" title="Make powerful connections." />
 
-        </h2>
-        <p
-
-          className="text-4xl md:text-[64px] lg-[80px] font-sf font-semibold
-           text-[#f5f5f7] tracking-[-0.01em] leading-[1.05]
-           max-w-[83.3%]"
-        >
-          Make powerful connections.
-        </p>
-        <div className="text-textGray my-16 max-w-[75%] font-sf text-xl font-semibold justify-start 
+      <div className="w-full md:w-[692px] lg:w-[980px] mx-auto relative ps-[8.3%] ">
+        <div className="text-textGray my-4 md:my-16 w-full md:max-w-[75%] font-sf text-[17px] md:text-xl font-semibold justify-start 
         text-start leading-snug tracking-[-0.011em] opacity-100">
           <p>
             <span className="text-white">Tens of thousands of apps are optimized</span>&nbsp;
@@ -41,19 +32,21 @@ const PortsSection = () => {
       </div>
 
       <div className="w-full flex flex-col gap-12 my-12">
-        <div className="relative  ml-auto left-96">
+
+        <picture className="relative ml-auto left-12 md:left-96 h-[59px]">
           <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:734px)" />
           <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:1068px)" />
           <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:0)" />
           <img src="/images/port-1.jpg" alt="display" className="w-full h-full" />
-        </div>
+        </picture>
 
-        <div className="relative  mr-auto right-96">
+        <picture className="relative mr-auto right-12 md:right-96 h-[59px]">
           <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:734px)" />
           <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:1068px)" />
           <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:0)" />
           <img src="/images/port-2.jpg" alt="display" className="w-full h-full" />
-        </div>
+        </picture>
+
       </div>
 
 
@@ -66,9 +59,9 @@ const PortsSection = () => {
             : { opacity: 0, y: 50, scale: 0.9 }
         }
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-2xl items-center justify-start my-20 "
+        className="w-full md:max-w-2xl items-center justify-start my-20 px-12 md:px-0"
       >
-        <div className="grid grid-cols-2 gap-28 font-sf ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-28 font-sf ">
           <div className="border-top">
 
             <ul className="text-white font-sf text-xl font-semibold justify-start pt-8 

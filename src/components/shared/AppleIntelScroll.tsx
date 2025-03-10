@@ -31,12 +31,12 @@ export default function AppleIntellScroll() {
       className="w-full my-20 z-50"
     >
       {/* Tab Content */}
-      <CarouselContent className="gap-16 mx-auto max-w-4xl">
+      <CarouselContent className="gap-8 md:gap-16 mx-auto max-w-[364px] h-[262px] md:max-w-4xl">
         <AnimatePresence>
           {slides.map((tab, index) => (
             <CarouselItem
               key={tab.title}
-              className={`md:basis-1/2 lg:basis-[100%] `}
+              className={` basis-full md:basis-1/2 lg:basis-[100%] `}
               style={{ opacity: currentIndex === index ? 1 : 0.4 }}
             >
               <picture>
@@ -50,13 +50,13 @@ export default function AppleIntellScroll() {
         </AnimatePresence>
       </CarouselContent>
 
-      <div className="relative pt-16 flex flex-col items-center justify-center">
-        <ul className="flex gap-8 border-b border-gray-50">
+      <div className="relative pt-16 flex flex-col items-center justify-center ">
+        <ul className="flex gap-4 md:gap-8 border-b border-gray-50">
           {slides.map((tab, index) => (
             <li
               key={tab.title}
               onClick={() => api?.scrollTo(index)}
-              className={`cursor-pointer relative px-2 py-3 transition-colors text-2xl font-normal 
+              className={`cursor-pointer relative px-8 md:px-2 py-3 transition-colors text-[19px] md:text-2xl font-normal 
                  leading-[1.21] tracking-[-0.021em] 
                 ${currentIndex === index
                   ? "ai-gradient-text border-white"
@@ -72,7 +72,7 @@ export default function AppleIntellScroll() {
           ))}
         </ul>
         {/* Description for the active slide */}
-        <p className="mt-4 text-lg text-center max-w-xl text-textGray px-20">{slides[currentIndex]?.description}</p>
+        <p className="mt-4 text-[14px] md:text-lg text-center w-full md:max-w-xl text-textGray px-6 md:px-20">{slides[currentIndex]?.description}</p>
       </div>
     </Carousel>
   );

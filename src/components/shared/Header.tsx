@@ -167,7 +167,7 @@ export default function Header() {
                   </div>
 
                   <div className="flex lg:hidden space-x-2">
-                    <button onClick={() => setScrolledMobileMenu(true)}>
+                    <button onClick={() => setScrolledMobileMenu((prev) => !prev)}>
                       <ChevronDown className="text-textGray" />
                     </button>
 
@@ -184,36 +184,32 @@ export default function Header() {
               </div>
             </motion.div>
           )}
+        </AnimatePresence>
 
+        <AnimatePresence>
           {scrolled && scrolledMobileMenu && (
-            <AnimatePresence>
-              {mobileMenu && (
-                <motion.div
-                  initial={{ y: "-100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "-100%" }}
-                  transition={{ duration: 0.3, ease: "easeInOut" }}
-                  className="fixed top-20 left-0 w-full h-screen bg-[#161617] text-white p-6 z-50 shadow-lg"
-                >
-
-
-                  <div className="mt-12 flex flex-col space-y-6">
-                    <a
-                      href="#overview"
-                      className="text-[#f5f5f5]  hover:text-white transition-colors text-xs font-sf"
-                    >
-                      Overview
-                    </a>
-                    <a
-                      href="#specs"
-                      className="text-white/80 border-b border-transparent hover:border-[#f5f5f5] hover:text-white transition-colors text-xs font-sf"
-                    >
-                      Tech Specs
-                    </a>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <>
+              <div
+                className="fixed inset-0 bg-black/50 backdrop-blur-lg z-40 top-[44px] h-full"
+              // onClick={onClose}
+              />
+              <motion.div
+                initial={{ y: "-100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-100%" }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="fixed top-[44px] left-0 w-full bg-[#161617] text-white p-6 z-50 shadow-lg border-b border-textGray backdrop-blur-md"
+              >
+                <div className="mt-12 flex flex-col space-y-6">
+                  <a href="#overview" className="text-[#f5f5f5] hover:text-white transition-colors text-xs font-sf">
+                    Overview
+                  </a>
+                  <a href="#specs" className="text-white/80 border-b border-transparent hover:border-[#f5f5f5] hover:text-white transition-colors text-xs font-sf">
+                    Tech Specs
+                  </a>
+                </div>
+              </motion.div>
+            </>
           )}
         </AnimatePresence>
 

@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import CamMicSpeakerScroll from "./CamMicSpeakerScroll";
+import SectionHeadingInner from "./SectionHeadingInner";
 
 const CamMacSpeaker = () => {
   const ref = useRef(null);
@@ -10,21 +11,8 @@ const CamMacSpeaker = () => {
   const scale = useTransform(scrollY, [0, 200], [0.9, 1.1]);
 
   return (
-    <section ref={ref} className="w-full mx-auto pb-52 bg-black flex flex-col items-center justify-center">
-      <div className="md:w-[692px] lg:w-[980px] mx-auto relative ps-[8.3%] ">
-        <h2 className="font-sf text-[rgb(245,245,247)] text-xl font-semibold 
-        uppercase mb-2 leading-5 tracking-[-0.02em] max-w-[75%]">
-          Cameras, Mics, and Speakers
-        </h2>
-        <p
-
-          className="text-4xl md:text-[64px] lg-[80px] font-sf font-semibold
-           text-[#f5f5f7] tracking-[-0.01em] leading-[1.05]
-           max-w-[83.3%]"
-        >
-          Make it a command performance.
-        </p>
-      </div>
+    <section ref={ref} className="w-full mx-auto pb-12 md:pb-52 bg-black flex flex-col items-center justify-center">
+      <SectionHeadingInner chipTitle="Cameras, Mics, and Speakers" title="Make it a command performance." />
 
       <motion.div
         ref={ref}
@@ -35,10 +23,10 @@ const CamMacSpeaker = () => {
             : { opacity: 0, y: 50, scale: 0.9 }
         }
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-2xl mx-auto justify-start 
-        items-start flex flex-col gap-4 pt-12"
+        className="w-full md:max-w-2xl mx-auto justify-start 
+        items-start flex flex-col gap-4 pt-12 px-12 md:px-0"
       >
-        <p className="text-[#86868b] text-[17px] leading-snug tracking-[-0.02em] w-[75%]">
+        <p className="text-[#86868b] text-[17px] leading-snug tracking-[-0.02em] w-full md:w-[75%]">
           <span className="text-white ">
             Tens of thousands of apps are optimized
           </span>
@@ -50,7 +38,7 @@ const CamMacSpeaker = () => {
 
         <p
           className="text-textGray text-[17px] font-sf font-semibold 
-        leading-snug tracking-[-0.02em] opacity-100 w-[75%]"
+        leading-snug tracking-[-0.02em] opacity-100 w-full md:w-[75%]"
         >
           The 12MP Center Stage camera helps you look sharp in any light.
           Together with the advanced mics and speakers, it lets you take charge
@@ -69,9 +57,9 @@ const CamMacSpeaker = () => {
             : { opacity: 0, y: 50, scale: 0.9 }
         }
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="max-w-2xl items-center justify-start my-20 "
+        className="w-full md:max-w-2xl items-center justify-start my-20 px-12"
       >
-        <div className="grid grid-cols-2 gap-28 font-sf ">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28 font-sf ">
           <div className="border-top flex flex-col">
             <div className="pt-8 pb-2">
               <source srcSet="/images/mic-speaker-small.png" type="image/png" media="(max-width:734px)" />
@@ -79,7 +67,7 @@ const CamMacSpeaker = () => {
               <source srcSet="/images/mic-speaker-small.png" type="image/png" media="(max-width:0)" />
               <img src="/images/mic-speaker-small.png" alt="display" className=" w-12 h-12 object-contain " />
             </div>
-            <p className="text-textGray font-sf text-xl font-semibold justify-start   
+            <p className="text-textGray font-sf text-[17px] md:text-xl font-semibold justify-start   
             text-start leading-snug tracking-[-0.011em] opacity-100 pb-10"
             >
               <span className="text-white">Studio-quality three-mic array.</span>&nbsp;
@@ -94,7 +82,7 @@ const CamMacSpeaker = () => {
               <img src="/images/mic-speaker-small-2.png" alt="display" className=" w-12 h-12 object-contain " />
             </div>
             <p
-              className="text-textGray font-sf text-xl font-semibold justify-start 
+              className="text-textGray font-sf text-[17px] md:text-xl font-semibold justify-start 
               text-start leading-snug tracking-[-0.011em] opacity-100 pb-10"
             >
               <span className="text-white">Six-speaker sound system.</span>&nbsp;

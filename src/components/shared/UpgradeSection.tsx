@@ -1,17 +1,19 @@
 
+import cardsData from "@/assets/constants/GridData";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
 } from "../ui/tooltip";
+import GridCard from "./GridCards";
 
 
 
 const UpgradeSection = () => {
 
   return (
-    <section className="w-full mx-auto pb-52 bg-black items-center justify-center">
+    <section className="w-full mx-auto pb-52 bg-black items-center justify-center px-8">
       <div className="md:w-[692px] lg:w-[700px] mx-auto relative">
         <h2 className="font-sf text-4xl md:text-[64px] lg-[80px] text-[#f5f5f7] 
         font-semibold text-center leading-[1.05] tracking-[-0.015em] ">
@@ -61,119 +63,8 @@ const UpgradeSection = () => {
 
       </div>
 
-      <div className="md:w-[692px] lg:w-[900px] mx-auto relative">
-        <section
-          className="grid grid-cols-2 gap-5
-               grid-rows-[auto_auto_auto] 
-               auto-rows-min"
-          style={{
-            gridTemplateAreas: `
-        "bento-1 bento-3"
-        "bento-1 bento-4"
-        "bento-2 bento-4"
-      `,
-          }}
-        >
-          {/* First Card - Taller (2 rows) */}
-          <div className="relative min-h-[380px] w-full h-full rounded-[28px]"
-            style={{
-              gridArea: "bento-1",
-              backgroundImage: "url(/images/upgraders-intel.jpg)",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover"
-            }}
-          >
-
-            {/* Text Overlay */}
-            <div className="absolute bottom-0 inset-x-0 flex flex-col 
-            items-start justify-end rounded-[28px] px-10 pb-8">
-              <picture>
-                <source srcSet="/images/icon-macbook.png" type="image/png" media="(max-width:734px)" />
-                <source srcSet="/images/icon-macbook.png" type="image/png" media="(max-width:1068px)" />
-                <source srcSet="/images/icon-macbook.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/icon-macbook.png" alt="display" className="w-[100px] h-[106px] object-cover" />
-              </picture>
-              <h2 className="text-white text-[40px] font-semibold font-sf leading-[1.1]">
-                Fly through demanding tasks up to 9.8x faster.
-                <sup className="underline">4</sup>
-              </h2>
-            </div>
-          </div>
-
-          {/* Second Card - Smaller */}
-          <div className="relative min-h-[230px]" style={{ gridArea: "bento-2" }}>
-            <div className="bg-[#1d1d1f] object-cover h-full w-full rounded-[28px]" />
-
-            {/* Text Overlay */}
-            <div className="absolute bottom-4 inset-0 flex items-center gap-8 p-10">
-              <picture>
-                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:734px)" />
-                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:1068px)" />
-                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/icon-xdr-display.png" alt="display" className="w-[100px] h-[106px] object-contain" />
-              </picture>
-              <div>
-                <h2 className="text-white text-[28px] font-semibold font-sf leading-[1.1] tracking-[.007em]">
-                  A stunning  <br />
-                  <span>Liquid Retina XDR</span>&nbsp;
-                  display.
-                </h2>
-              </div>
-            </div>
-          </div>
-
-          {/* Third Card - Smaller */}
-          <div className="relative min-h-[230px] card-glow" style={{ gridArea: "bento-3" }}>
-            <div className="bg-[#1d1d1f] object-cover h-full w-full rounded-[28px] card" />
-            {/* Text Overlay */}
-            <div className="absolute bottom-4 inset-0 flex items-center justify-start space-x-4 p-10 z-50">
-              <picture>
-                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:734px)" />
-                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:1068px)" />
-                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/icon-apple-intelligence.png" alt="display" className="w-[100px] h-[106px] object-contain" />
-              </picture>
-              <h2 className="text-white text-[28px] font-semibold font-sf leading-[1.1] tracking-[.007em] ">
-                Built for <br />
-                <span className="ai-gradient-text">
-                  Apple Intelligence
-                </span>
-              </h2>
-            </div>
-
-          </div>
-
-          {/* Fourth Card - Taller (2 rows) */}
-          <div className="relative min-h-[380px] w-full h-full rounded-[28px]"
-            style={{
-              gridArea: "bento-4",
-              backgroundColor: "#1d1d1f",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover"
-            }}>
-
-            {/* Text Overlay */}
-            <div className="absolute bottom-0 inset-x-0 flex flex-col 
-            items-start justify-end rounded-[28px] px-10 pb-8">
-              <picture>
-                <source srcSet="/images/icon-battery-life.png" type="image/png" media="(max-width:734px)" />
-                <source srcSet="/images/icon-battery-life.png" type="image/png" media="(max-width:1068px)" />
-                <source srcSet="/images/con-battery-life.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/icon-battery-life.png" alt="display" className="w-[100px] h-[106px] object-cover" />
-              </picture>
-              <h2 className="text-white text-[36px] font-semibold font-sf leading-[1.1] ">
-                Up to
-                <span className="battery-gradient-text">
-                  14 more hours
-                </span>&nbsp; battery life.5&nbsp;
-                <span className="text-textGray">(Up to 24 hours total.)
-                  <sup className="underline">6</sup>
-                </span>
-
-              </h2>
-            </div>
-          </div>
-        </section>
+      <div className="w-full md:w-[692px] lg:w-[750px] mx-auto relative h-[702px] md:h-[630px]">
+        <GridCard cards={cardsData} />
       </div>
 
 
@@ -182,3 +73,6 @@ const UpgradeSection = () => {
 };
 
 export default UpgradeSection;
+
+
+

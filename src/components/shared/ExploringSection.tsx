@@ -1,4 +1,3 @@
-import { Button } from "../ui/button";
 import { useState } from "react";
 
 const ExploringSection = () => {
@@ -6,7 +5,7 @@ const ExploringSection = () => {
   const [activeMacbookAir, setActiveMacbookAir] = useState(0);
 
   return (
-    <section className="w-full mx-auto bg-appleGray flex flex-col pt-28 pb-60 px-8 lg:px-0">
+    <section className="w-full mx-auto bg-appleGray flex flex-col pt-28 pb-60 px-6 lg:px-0">
       <div className="max-w-5xl w-full items-start justify-start">
         <h2 className="font-sf text-[32px] md:text-5xl lg:text-[56px]
          text-white font-semibold text-start leading-[1.05] tracking-[-0.015em] mb-20">
@@ -14,7 +13,7 @@ const ExploringSection = () => {
         </h2>
       </div>
 
-      <div className="w-full lg:w-[600px] mx-auto relative flex flex-col justify-start items-center lg:justify-center pt-12">
+      <div className="w-full lg:w-[600px] mx-auto relative flex flex-col pt-12">
         <div className="flex gap-8 md:gap-12">
           {/* MacBook Pro */}
           <MacbookDisplay
@@ -43,7 +42,7 @@ const ExploringSection = () => {
         {/* Divider */}
         <div className="w-full h-px bg-gray-800 mt-16"></div>
 
-        <div className="flex gap-8 text-[#f5f5f5] items-center justify-center mx-auto mt-16">
+        <div className="flex flex-row gap-8 text-[#f5f5f5] mx-auto mt-24 md:mt-16">
           <MacbookSpecifications
             chipSrc="/images/mac-pro-chip.png"
             chipDescription="Apple M4, M4 Pro, or M4 Max chip"
@@ -87,7 +86,7 @@ const MacbookDisplay: React.FC<MacbookDisplayProps> = ({
   newLabel,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-start lg:justify-center gap-8">
+    <div className="flex flex-col w-1/2 items-center justify-start md:justify-center gap-8">
       <picture>
         <source srcSet={imageSrc} type="image/png" />
         <img src={imageSrc} alt={title} className="w-full max-w-[300px] h-auto object-contain" loading="lazy" />
@@ -139,25 +138,39 @@ const MacbookSpecifications: React.FC<MacbookSpecificationsProps> = ({
   batteryLife,
   portsDescription,
 }) => (
-  <div className="grid gri-row-5 items-center justify-center mx-auto text-center font-sf text-[10px]">
-    <picture>
-      <source srcSet={chipSrc} type="image/png" />
-      <img src={chipSrc} alt={chipDescription} className="w-16 h-16 object-contain" loading="lazy" />
-    </picture>
+  <div className="w-1/2 flex flex-col justify-center mx-auto text-start md:text-center font-sf text-[10px] h-72">
+    <div className="flex justify-start md:justify-center">
+      <picture>
+        <source srcSet={chipSrc} type="image/png" />
+        <img
+          src={chipSrc}
+          alt={chipDescription}
+          className="w-20 h-20 object-contain"
+          loading="lazy"
+        />
+      </picture>
+    </div>
     <p className="pt-8">{chipDescription}</p>
     <div className="flex flex-col py-4 gap-2">
       <p>Up to</p>
       <p className="text-lg">{batteryLife}</p>
-      <p>battery life <sup className="underline">3</sup></p>
+      <p>
+        battery life <sup className="underline">3</sup>
+      </p>
     </div>
     <div className="flex flex-col gap-2 py-4 mx-auto items-center justify-center">
       <p>{portsDescription}</p>
     </div>
-    <div className="flex flex-col gap-2 py-4 items-center justify-center">
-      <div className="pt-8 pb-2">
+    <div className="flex flex-col gap-2 py-4 justify-center">
+      <div className="pt-8 pb-2 flex justify-center">
         <picture>
           <source srcSet="/images/icon-apple-intelligence.png" type="image/png" />
-          <img src="/images/icon-apple-intelligence.png" alt="Apple Intelligence" className="w-16 h-16 object-contain" loading="lazy" />
+          <img
+            src="/images/icon-apple-intelligence.png"
+            alt="Apple Intelligence"
+            className="w-8 h-8 object-contain"
+            loading="lazy"
+          />
         </picture>
       </div>
       <p>Built for Apple Intelligence1</p>

@@ -51,7 +51,7 @@ const BatterySection = () => {
           ].map((metric, index) => (
             <div key={index} className="border-top py-4">
               <p className="text-textGray text-xl">Up to</p>
-              <h3 className="font-sf text-white text-5xl font-semibold">{metric.speed}</h3>
+              <h3 className="font-sf text-white text-3xl font-semibold">{metric.speed}</h3>
               <p className="text-textGray text-xl">than {metric.comparison}
                 <sup className="underline"><a href="">{metric.footnote}</a></sup>
               </p>

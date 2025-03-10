@@ -84,6 +84,7 @@ const PerformanceSection = () => {
           <h3 className="text-white text-4xl font-sf font-semibold md:text-[70px] ">Next-level graphics </h3>
           <h3 className="text-white text-4xl font-sf font-semibold md:text-[70px] ">performance. Game on.</h3>
         </div>
+
         <div className="w-full md:hidden mx-auto px-8 flex flex-col text-center items-center justify-center">
           <h3 className="text-white text-[32px] font-sf font-semibold leading-tight">Next-level graphics performance. <br /> Game on.</h3>
         </div>

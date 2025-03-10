@@ -1,16 +1,9 @@
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
 import HorizontalScroll from "./HorizontalScroll";
 import SectionHeadingInner from "./SectionHeadingInner";
 
 const MacosSection = () => {
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
     <section ref={ref} className="w-full mx-auto pb-52 bg-black">
