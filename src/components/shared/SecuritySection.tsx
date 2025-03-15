@@ -32,10 +32,10 @@ const SecuritySection = () => {
 
       <div className="flex items-center justify-center mx-auto w-[342px] h-[210px] md:w-3/4 mb-32 mt-8 md:mt-20">
         <picture>
-          <source srcSet="/images/security-2.jpg" type="image/jpg" media="(max-width:734px)" />
-          <source srcSet="/images/security-2.jpg" type="image/jpg" media="(max-width:1068px)" />
-          <source srcSet="/images/security-2.jpg" type="image/jpg" media="(max-width:0)" />
-          <img src="/images/security-2.jpg" alt="display" className="w-full h-full  object-cover" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050765/apple-remastered/images/security-2_qnfmeb.jpg" type="image/jpg" media="(max-width:734px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050765/apple-remastered/images/security-2_qnfmeb.jpg" type="image/jpg" media="(max-width:1068px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050765/apple-remastered/images/security-2_qnfmeb.jpg" type="image/jpg" media="(max-width:0)" />
+          <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050765/apple-remastered/images/security-2_qnfmeb.jpg" alt="display" className="w-full h-full  object-cover" />
         </picture>
 
       </div>

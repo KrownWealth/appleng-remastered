@@ -1,20 +1,26 @@
 export const closerLookSlides = [
   {
-    image: "/images/closer-look/slide1.jpg",
+    image:
+      "https://res.cloudinary.com/dtainagml/image/upload/v1742051203/apple-remastered/images/slide1_vkz3t3.jpg",
   },
   {
-    image: "/images/closer-look/slide2.jpg",
+    image:
+      "https://res.cloudinary.com/dtainagml/image/upload/v1742051203/apple-remastered/images/slide2_fjfuxp.jpg",
   },
   {
-    image: "/images/closer-look/slide3.jpg",
+    image:
+      "https://res.cloudinary.com/dtainagml/image/upload/v1742051204/apple-remastered/images/slide3_k7jk6e.jpg",
   },
   {
-    image: "/images/closer-look/slide4.jpg",
+    image:
+      "https://res.cloudinary.com/dtainagml/image/upload/v1742051207/apple-remastered/images/slide4_exkhdh.jpg",
   },
   {
-    image: "/images/closer-look/slide5.jpg",
+    image:
+      "https://res.cloudinary.com/dtainagml/image/upload/v1742051208/apple-remastered/images/slide5_orrqyo.jpg",
   },
   {
-    image: "/images/closer-look/slide6.jpg",
+    image:
+      "https://res.cloudinary.com/dtainagml/image/upload/v1742051232/apple-remastered/images/slide6_bmqggx.jpg",
   },
 ] as const;

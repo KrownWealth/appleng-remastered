@@ -16,10 +16,10 @@ const MacIphone = () => {
         {/* Left presentation */}
         <div className="w-full lg:w-1/2 flex justify-start">
           <picture className="relative -left-60 md:-left-[26rem] block">
-            <source srcSet="/images/mac-iphone.jpg" type="image/jpg" media="(max-width:734px)" />
-            <source srcSet="/images/mac-iphone.jpg" type="image/jpg" media="(max-width:1068px)" />
-            <source srcSet="/images/mac-iphone.jpg" type="image/jpg" media="(max-width:0)" />
-            <img src="/images/mac-iphone.jpg" alt="Mac + iPhone" className="w-auto h-auto max-w-[150%] max-h-[150%] object-cover" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050748/apple-remastered/images/mac-iphone_vtb7jh.jpg" type="image/jpg" media="(max-width:734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050748/apple-remastered/images/mac-iphone_vtb7jh.jpg" type="image/jpg" media="(max-width:1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050748/apple-remastered/images/mac-iphone_vtb7jh.jpg" type="image/jpg" media="(max-width:0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050748/apple-remastered/images/mac-iphone_vtb7jh.jpg" alt="Mac + iPhone" className="w-auto h-auto max-w-[150%] max-h-[150%] object-cover" />
           </picture>
         </div>
 
@@ -60,17 +60,17 @@ export default MacIphone;
 
 const features = [
   {
-    img: "/images/icon-mirroring.png",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742050743/apple-remastered/images/icon-mirroring_nufr28.png",
     title: "Answer calls and texts.",
     text: "Your calls and texts come right to your laptop, so you don't need to switch devices when you're in the zone."
   },
   {
-    img: "/images/icon-clipboard.png",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742050741/apple-remastered/images/icon-clipboard_fiuwoi.png",
     title: "Universal Clipboard.",
     text: "Copy text, images, photos, and videos on your iPhone and paste to your Mac — or vice versa."
   },
   {
-    img: "/images/icon-airdrop.png",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742050738/apple-remastered/images/icon-airdrop_cyvh85.png",
     title: "AirDrop.",
     text: "Wirelessly share photos, large files, and more between your iPhone, your Mac, and other nearby Apple devices. No Wi-Fi network required."
   }

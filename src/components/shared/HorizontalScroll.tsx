@@ -4,15 +4,15 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselApi } from "../ui/carousel";
 
 const tabs = [
-  { id: "xcode", label: "Coding", image: "/images/carousel/carousel-1.jpg" },
-  { id: "photo-editing", label: "Photo Editing", image: "/images/carousel/carousel-2.jpg" },
-  { id: "stem", label: "STEM", image: "/images/carousel/carousel-3.jpg" },
-  { id: "business", label: "Business", image: "/images/carousel/carousel-4.jpg" },
-  { id: "graphic-design", label: "Graphic design", image: "/images/carousel/carousel-5.jpg" },
-  { id: "3d-animation-and-design", label: "3D animation and design", image: "/images/carousel/carousel-6.jpg" },
-  { id: "music-production", label: "Music production", image: "/images/carousel/carousel-7.jpg" },
-  { id: "video-editing", label: "Video editing", image: "/images/carousel/carousel-8.jpg" },
-  { id: "gaming", label: "Gaming", image: "/images/carousel/carousel-9.jpg" },
+  { id: "xcode", label: "Coding", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051246/apple-remastered/images/carousel-1_iz6bzj.jpg" },
+  { id: "photo-editing", label: "Photo Editing", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051247/apple-remastered/images/carousel-2_xltijl.jpg" },
+  { id: "stem", label: "STEM", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051250/apple-remastered/images/carousel-3_fszkjw.jpg" },
+  { id: "business", label: "Business", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051251/apple-remastered/images/carousel-4_szrhpf.jpg" },
+  { id: "graphic-design", label: "Graphic design", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051254/apple-remastered/images/carousel-5_expgc8.jpg" },
+  { id: "3d-animation-and-design", label: "3D animation and design", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051333/apple-remastered/images/carousel-6_stxa8m.jpg" },
+  { id: "music-production", label: "Music production", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051301/apple-remastered/images/carousel-7_ufy6jq.jpg" },
+  { id: "video-editing", label: "Video editing", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051334/apple-remastered/images/carousel-8_hejdmg.jpg" },
+  { id: "gaming", label: "Gaming", image: "https://res.cloudinary.com/dtainagml/image/upload/v1742051337/apple-remastered/images/carousel-9_dvbbe0.jpg" },
 ];
 
 export default function HorizontalScroll() {

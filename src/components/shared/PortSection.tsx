@@ -39,17 +39,17 @@ const PortsSection = () => {
       <div className="w-full flex flex-col gap-12 my-12">
 
         <picture className="relative ml-auto left-12 md:left-96 h-[59px] md:h-full">
-          <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:734px)" />
-          <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:1068px)" />
-          <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:0)" />
-          <img src="/images/port-1.jpg" alt="display" className="w-full h-full" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-1_nmaupy.jpg" type="image/jpg" media="(max-width:734px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-1_nmaupy.jpg" type="image/jpg" media="(max-width:1068px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-1_nmaupy.jpg" type="image/jpg" media="(max-width:0)" />
+          <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-1_nmaupy.jpg" alt="display" className="w-full h-full" />
         </picture>
 
         <picture className="relative mr-auto right-12 md:right-96 h-[59px] md:h-full">
-          <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:734px)" />
-          <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:1068px)" />
-          <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:0)" />
-          <img src="/images/port-2.jpg" alt="display" className="w-full h-full" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-2_pkvfrw.jpg" type="image/jpg" media="(max-width:734px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-2_pkvfrw.jpg" type="image/jpg" media="(max-width:1068px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-2_pkvfrw.jpg" type="image/jpg" media="(max-width:0)" />
+          <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050762/apple-remastered/images/port-2_pkvfrw.jpg" alt="display" className="w-full h-full" />
         </picture>
 
       </div>

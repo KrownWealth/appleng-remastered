@@ -17,7 +17,7 @@ const ExploringSection = () => {
             newLabel="new"
             subtitle="M4, M4 Pro, or M4 Max chip"
             description="The most advanced Mac laptops for demanding workflows."
-            imageSrc="/images/mac-pro.png"
+            imageSrc="https://res.cloudinary.com/dtainagml/image/upload/v1742050749/apple-remastered/images/mac-pro_nho9qc.png"
             activeIndex={activeMacbookPro}
             setActiveIndex={setActiveMacbookPro}
           />
@@ -28,7 +28,7 @@ const ExploringSection = () => {
             newLabel="new"
             subtitle="M2 or M3 chip"
             description="Strikingly thin and fast so you can work, play, or create anywhere."
-            imageSrc="/images/mac-air.png"
+            imageSrc="https://res.cloudinary.com/dtainagml/image/upload/v1742050746/apple-remastered/images/mac-air_ejkglb.png"
             activeIndex={activeMacbookAir}
             setActiveIndex={setActiveMacbookAir}
             buttonLabel="Learn more"
@@ -40,14 +40,14 @@ const ExploringSection = () => {
 
         <div className="flex flex-row gap-8 text-[#f5f5f5] mx-auto mt-24 md:mt-16">
           <MacbookSpecifications
-            chipSrc="/images/mac-pro-chip.png"
+            chipSrc="https://res.cloudinary.com/dtainagml/image/upload/v1742050750/apple-remastered/images/mac-pro-chip_xcwgir.png"
             chipDescription="Apple M4, M4 Pro, or M4 Max chip"
             batteryLife="24 hrs"
             portsDescription="7 ports: 3x Thunderbolt 4 (USB-C) or 3x Thunderbolt 5 (USB-C), HDMI, SDXC, headphone jack, MagSafe"
           />
 
           <MacbookSpecifications
-            chipSrc="/images/mac-air-chip.png"
+            chipSrc="https://res.cloudinary.com/dtainagml/image/upload/v1742050747/apple-remastered/images/mac-air-chip_gum3rb.png"
             chipDescription="Apple M2, or M3 chip"
             batteryLife="18 hrs"
             portsDescription="4 ports: 2x Thunderbolt / USB 4, headphone jack, MagSafe"
@@ -160,9 +160,9 @@ const MacbookSpecifications: React.FC<MacbookSpecificationsProps> = ({
     <div className="flex flex-col gap-2 py-4 justify-center">
       <div className="pt-8 pb-2 flex justify-center">
         <picture>
-          <source srcSet="/images/icon-apple-intelligence.png" type="image/png" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050739/apple-remastered/images/icon-apple-intelligence_fi91ac.png" type="image/png" />
           <img
-            src="/images/icon-apple-intelligence.png"
+            src="https://res.cloudinary.com/dtainagml/image/upload/v1742050739/apple-remastered/images/icon-apple-intelligence_fi91ac.png"
             alt="Apple Intelligence"
             className="w-8 h-8 object-contain"
             loading="lazy"

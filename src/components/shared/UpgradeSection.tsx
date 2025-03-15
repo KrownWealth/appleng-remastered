@@ -68,7 +68,7 @@ const UpgradeSection = () => {
           <div className="relative min-h-[162px] md:min-h-[380px] w-full h-full rounded-[28px]"
             style={{
               gridArea: "bento-1",
-              backgroundImage: "url(/images/upgraders-intel.jpg)",
+              backgroundImage: "url(https://res.cloudinary.com/dtainagml/image/upload/v1742050767/apple-remastered/images/upgraders-intel_bqhhbf.jpg)",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover"
             }}
@@ -98,10 +98,10 @@ const UpgradeSection = () => {
             {/* Text Overlay */}
             <div className="absolute bottom-5 md:bottom-10  inset-0 flex items-center gap-8 p-10">
               <picture>
-                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:734px)" />
-                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:1068px)" />
-                <source srcSet="/images/icon-xdr-display.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/icon-xdr-display.png" alt="display"
+                <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050744/apple-remastered/images/icon-xdr-display_o2gjwl.png" type="image/png" media="(max-width:734px)" />
+                <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050744/apple-remastered/images/icon-xdr-display_o2gjwl.png" type="image/png" media="(max-width:1068px)" />
+                <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050744/apple-remastered/images/icon-xdr-display_o2gjwl.png" type="image/png" media="(max-width:0)" />
+                <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050744/apple-remastered/images/icon-xdr-display_o2gjwl.png" alt="display"
                   className="w-[60px] h-[60px] md:w-[100px] md:h-[106px] object-contain" />
               </picture>
               <div>
@@ -120,10 +120,10 @@ const UpgradeSection = () => {
             {/* Text Overlay */}
             <div className="absolute bottom-5 md:bottom-10 inset-0 flex items-center justify-start space-x-4 p-10 z-50">
               <picture>
-                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:734px)" />
-                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:1068px)" />
-                <source srcSet="/images/icon-apple-intelligence.png" type="image/png" media="(max-width:0)" />
-                <img src="/images/icon-apple-intelligence.png" alt="display"
+                <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050739/apple-remastered/images/icon-apple-intelligence_fi91ac.png" type="image/png" media="(max-width:734px)" />
+                <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050739/apple-remastered/images/icon-apple-intelligence_fi91ac.png" type="image/png" media="(max-width:1068px)" />
+                <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050739/apple-remastered/images/icon-apple-intelligence_fi91ac.png" type="image/png" media="(max-width:0)" />
+                <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050739/apple-remastered/images/icon-apple-intelligence_fi91ac.png" alt="display"
                   className="w-[60px] h-[60px] md:w-[100px] md:h-[106px] object-contain" />
               </picture>
               <h2 className="text-white text-[19px] md:text-[28px] font-semibold font-sf leading-[1.1] tracking-[.007em] ">

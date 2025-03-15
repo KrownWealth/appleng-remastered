@@ -18,10 +18,10 @@ const DisplaySection = () => {
       <div className="flex items-center justify-center mx-auto aspect-video md:w-[40%] relative -left-20 md:-left-0 mt-0 md:mt-8">
         <figure>
           <picture>
-            <source srcSet="/images/display-1.jpg" type="image/jpg" media="(max-width:734px)" />
-            <source srcSet="/images/display-1.jpg" type="image/jpg" media="(max-width:1068px)" />
-            <source srcSet="/images/display-1.jpg" type="image/jpg" media="(max-width:0)" />
-            <img src="/images/display-1.jpg" alt="display" className="w-full h-full  " />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050735/apple-remastered/images/display-1_epjpst.jpg" type="image/jpg" media="(max-width:734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050735/apple-remastered/images/display-1_epjpst.jpg" type="image/jpg" media="(max-width:1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050735/apple-remastered/images/display-1_epjpst.jpg" type="image/jpg" media="(max-width:0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050735/apple-remastered/images/display-1_epjpst.jpg" alt="display" className="w-full h-full  " />
           </picture>
         </figure>
       </div>
@@ -45,10 +45,10 @@ const DisplaySection = () => {
         <div className="flex items-center justify-center mx-auto w-full md:w-[55%] h-[300px] md:h-[480px] ">
           <figure>
             <picture>
-              <source srcSet="/images/display-2.jpg" type="image/jpg" media="(max-width:734px)" />
-              <source srcSet="/images/display-2.jpg" type="image/jpg" media="(max-width:1068px)" />
-              <source srcSet="/images/display-2.jpg" type="image/jpg" media="(max-width:0)" />
-              <img src="/images/display-2.jpg" alt="display" className="w-full h-full rounded-[28px]" />
+              <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050736/apple-remastered/images/display-2_a83jte.jpg" type="image/jpg" media="(max-width:734px)" />
+              <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050736/apple-remastered/images/display-2_a83jte.jpg" type="image/jpg" media="(max-width:1068px)" />
+              <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050736/apple-remastered/images/display-2_a83jte.jpg" type="image/jpg" media="(max-width:0)" />
+              <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050736/apple-remastered/images/display-2_a83jte.jpg" alt="display" className="w-full h-full rounded-[28px]" />
             </picture>
             <figcaption className="flex justify-center md:justify-end text-textGray text-[10px] md:text-sm font-sf py-1">MacBook Pro with nano-texture display</figcaption>
           </figure>

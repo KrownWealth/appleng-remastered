@@ -83,12 +83,12 @@ export default function CamMicSpeakerScroll() {
 const slides = [
   {
     title: "Center Stage",
-    img: "/images/micspeaker-1.jpg",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742050752/apple-remastered/images/micspeaker-1_zpeuwz.jpg",
     description: "Center Stage keeps you centered in the frame as you move around."
   },
   {
     title: "Desk View ",
-    img: "/images/micspeaker-2.jpg",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742050753/apple-remastered/images/micspeaker-2_q609fu.jpg",
     description: "Desk View lets you share your workspace, adding a whole new dimension to make your video calls more engaging."
   },
 

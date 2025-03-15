@@ -33,16 +33,16 @@ const PerformanceSection = () => {
                 autoPlay
                 muted
                 loop
-                src="/video/large-shadow-trasparet.mp4"
+                src="https://res.cloudinary.com/dtainagml/video/upload/v1742050666/apple-remastered/videos/large-shadow-trasparet_fpzder.mp4"
                 className={`w-full h-full object-cover transition-opacity duration-500 "
                   }`}
               />
             ) :
             (<picture className="w-full">
-              <source srcSet="/images/performance-ms-mobile.jpg" type="image/jpg" media="(max-width: 734px)" />
-              <source srcSet="/images/performance-ms-desktop.jpg" type="image/jpg" media="(max-width: 1068px)" />
-              <source srcSet="/images/performance.jpg" type="image/jpg" media="(min-width: 0)" />
-              <img src="/images/performance.jpg" alt="M4 Chip" className="w-full h-[600px] object-cover" />
+              <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050758/apple-remastered/images/performance_gtogz6.jpg" type="image/jpg" media="(max-width: 734px)" />
+              <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050758/apple-remastered/images/performance_gtogz6.jpg" type="image/jpg" media="(max-width: 1068px)" />
+              <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050758/apple-remastered/images/performance_gtogz6.jpg" media="(min-width: 0)" />
+              <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742050758/apple-remastered/images/performance_gtogz6.jpg" alt="M4 Chip" className="w-full h-[600px] object-cover" />
             </picture>
             )
           }
@@ -113,10 +113,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6 }}
             className="absolute md:hidden flex items-center justify-center w-[70%] z-20 top-[-170px]"
           >
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-1.jpg" alt="M4 Chip" className="w-full rounded-[48px]" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" type="image/jpg" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" type="image/jpg" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" type="image/jpg" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" alt="M4 Chip" className="w-full rounded-[48px]" />
+
           </motion.picture>
 
 
@@ -126,10 +127,10 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6 }}
             className="hidden md:flex items-center justify-center w-[80%] z-20"
           >
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-1.jpg" alt="M4 Chip" className="w-full rounded-[48px]" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" type="image/jpg" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" type="image/jpg" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" type="image/jpg" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen-blender-1_ckj8xf.jpg" alt="M4 Chip" className="w-full rounded-[48px]" />
           </motion.picture>
 
 
@@ -139,10 +140,10 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="absolute top-[-280px] md:top-[-160px] -right-12 md:right-[-300px] w-36 md:w-[45%] z-30"
           >
-            <source srcSet="/images/performance/performance-screen-blender-2.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-2.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-2.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-2.png" alt="M4 Chip"
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-2_ujxc6x.png" type="image/png" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-2_ujxc6x.png" type="image/png" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-2_ujxc6x.png" type="image/png" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-2_ujxc6x.png" alt="M4 Chip"
               className="w-full " />
           </motion.picture>
 
@@ -152,10 +153,10 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="absolute top-[-350px] -left-10 md:left-[-100px] w-[50%] z-10"
           >
-            <source srcSet="/images/performance/performance-screen-blender-3.jpg" type="image/jpg" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-3.jpg" type="image/jpg" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-3.jpg" type="image/jpg" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-3.jpg" alt="M4 Chip"
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-3_wjm3ep.jpg" type="image/jpg" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-3_wjm3ep.jpg" type="image/jpg" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-3_wjm3ep.jpg" type="image/jpg" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051067/apple-remastered/images/performance-screen-blender-3_wjm3ep.jpg" alt="M4 Chip"
               className="w-full " />
           </motion.picture>
 
@@ -165,10 +166,10 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="absolute bottom-[-50px] md:bottom-[-100px] -left-24  md:left-[-400px] w-36 md:w-[55%] z-50"
           >
-            <source srcSet="/images/performance/performance-screen-blender-4.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-4.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-4.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-4.png" alt="M4 Chip" className="w-full" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051112/apple-remastered/images/performance-screen-blender-4_dyxpnf.png" type="image/png" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051112/apple-remastered/images/performance-screen-blender-4_dyxpnf.png" type="image/png" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051112/apple-remastered/images/performance-screen-blender-4_dyxpnf.png" type="image/png" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051112/apple-remastered/images/performance-screen-blender-4_dyxpnf.png" alt="M4 Chip" className="w-full" />
           </motion.picture>
 
 
@@ -181,10 +182,10 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="absolute bottom-0 md:bottom-[-100px] -right-20  md:right-[-400px] w-36 md:w-[55%] z-50 md:z-10"
           >
-            <source srcSet="/images/performance/performance-screen-blender-5.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-5.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-5.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-5.png" alt="M4 Chip" className="w-full" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051137/apple-remastered/images/performance-screen-blender-5_ow3avd.png" type="image/png" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051137/apple-remastered/images/performance-screen-blender-5_ow3avd.png" type="image/png" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051137/apple-remastered/images/performance-screen-blender-5_ow3avd.png" type="image/png" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051137/apple-remastered/images/performance-screen-blender-5_ow3avd.png" alt="M4 Chip" className="w-full" />
           </motion.picture>
 
           <motion.picture
@@ -194,10 +195,10 @@ const PerformanceSection = () => {
 
             className="absolute top-[-320px] md:top-[-250px] right-10 w-36 md:w-[40%] z-50 border-one"
           >
-            <source srcSet="/images/performance/performance-screen.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen.png" alt="M4 Chip" className="w-full " />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen_qyaylx.png" type="image/png" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen_qyaylx.png" type="image/png" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen_qyaylx.png" type="image/png" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051066/apple-remastered/images/performance-screen_qyaylx.png" alt="M4 Chip" className="w-full " />
           </motion.picture>
 
           <motion.picture
@@ -206,10 +207,10 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="absolute -top-40 md:top-10 -left-24 md:left-[-280px] w-40 md:w-[40%] z-50 md:z-20"
           >
-            <source srcSet="/images/performance/performance-screen-blender-7.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-7.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-7.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-7.png" alt="M4 Chip" className="w-full " />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051138/apple-remastered/images/performance-screen-blender-7_n6brzw.png" type="image/png" media="(max-width: 734px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051138/apple-remastered/images/performance-screen-blender-7_n6brzw.png" type="image/png" media="(max-width: 1068px)" />
+            <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742051138/apple-remastered/images/performance-screen-blender-7_n6brzw.png" type="image/png" media="(min-width: 0)" />
+            <img src="https://res.cloudinary.com/dtainagml/image/upload/v1742051138/apple-remastered/images/performance-screen-blender-7_n6brzw.png" alt="M4 Chip" className="w-full " />
           </motion.picture>
 
         </div>

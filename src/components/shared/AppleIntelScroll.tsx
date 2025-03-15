@@ -80,19 +80,19 @@ export default function AppleIntellScroll() {
 const slides = [
   {
     title: "Writing Tools",
-    img: "/images/apple-intel/slide-1.jpg",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742051365/apple-remastered/images/slide-1_bhkory.jpg",
     description:
       "Writing Tools can proofread your text and rewrite different versions until the tone and wording are just right, and summarize selected text with a click.",
   },
   {
     title: "Siri",
-    img: "/images/apple-intel/slide-2.jpg",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742051365/apple-remastered/images/slide-2_jjp3vk.jpg",
     description:
       "With an all-new design, richer language understanding, and the ability to type to Siri whenever it's convenient for you, communicating with Siri is more natural than ever.",
   },
   {
     title: "Priority Message",
-    img: "/images/apple-intel/slide-3.jpg",
+    img: "https://res.cloudinary.com/dtainagml/image/upload/v1742051366/apple-remastered/images/slide-3_o3losy.jpg",
     description:
       "Get time-sensitive messages at the top of your inbox, like an invitation for a meeting in an hour or a reminder to check in for your flight. And Mail helps you summarize messages in a snap.",
   },

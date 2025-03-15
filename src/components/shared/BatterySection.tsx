@@ -25,11 +25,11 @@ const BatterySection = () => {
         style={{ scale }}
       >
         <picture>
-          <source srcSet="/images/battery-hero.jpg" type="image/jpg" media="(max-width: 734px)" />
-          <source srcSet="/images/battery-hero.jpg" type="image/jpg" media="(max-width: 1068px)" />
-          <source srcSet="/images/battery-hero.jpg" type="image/jpg" media="(min-width: 0)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050733/apple-remastered/images/battery-hero_ocprca.jpg" type="image/jpg" media="(max-width: 734px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050733/apple-remastered/images/battery-hero_ocprca.jpg" type="image/jpg" media="(max-width: 1068px)" />
+          <source srcSet="https://res.cloudinary.com/dtainagml/image/upload/v1742050733/apple-remastered/images/battery-hero_ocprca.jpg" type="image/jpg" media="(min-width: 0)" />
           <img
-            src="/images/battery-hero.jpg"
+            src="https://res.cloudinary.com/dtainagml/image/upload/v1742050733/apple-remastered/images/battery-hero_ocprca.jpg"
             alt="MacBook Pro with colorful keyboard lighting"
             className="w-full h-[600px] md:h-auto object-cover"
           />

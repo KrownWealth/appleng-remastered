@@ -1,6 +1,5 @@
 :root {
   --nav-text: rgba(255, 255, 255, .8);
-
   --nav-text-secondary: #E8E8ED;
   --nav-text-hover: #FFFFFF;
   --blue: #2997ff;
@@ -74,18 +73,17 @@
 
 
 /* Closer look section */
-
 .loader-progress-indicator {
   transition: transform 0.3s ease-out;
-}
+};
 
 .loader {
   transition: opacity 0.7s ease-in-out;
-}
+};
 
 .content-wrapper {
   transition: opacity 1s ease-in-out;
-}
+};
 
 @keyframes fadeIn {
   from {
@@ -382,6 +380,10 @@
   width: 87.5%;
 }
 
+.footer-image-mask{
+  font-size: 1em;
+  mask-image: url("/images/image-mask.svg");
+}
 
 /* bento-grid.css */
 
