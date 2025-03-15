@@ -16,7 +16,6 @@
 }
 
 
-
 .pro-text {
   user-select: auto;
   animation: fadein 2s ease-out forwards;
@@ -27,7 +26,6 @@
   letter-spacing: 0.007em;
   font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   z-index: 30;
-  /* Ensures it is ABOVE the neon text */
   position: relative;
 }
 
@@ -45,7 +43,6 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-  /* Mobile styles */
   .neonText {
   width: 420px;
   height: 320px;
@@ -75,15 +72,10 @@
 /* Closer look section */
 .loader-progress-indicator {
   transition: transform 0.3s ease-out;
-};
-
+}
 .loader {
   transition: opacity 0.7s ease-in-out;
-};
-
-.content-wrapper {
-  transition: opacity 1s ease-in-out;
-};
+}
 
 @keyframes fadeIn {
   from {
