@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="block md:hidden relative translate-y-[-30px] items-center -mt-8">
 
           <video
-            src="https://res.cloudinary.com/dtainagml/video/upload/v1742050667/apple-remastered/videos/hero-video_lvfsm4.mp4"
+            src="https://res.cloudinary.com/dtainagml/video/upload/v1742050666/apple-remastered/videos/hero-mobile-video_lvvqjo.mp4"
             autoPlay
             muted
             playsInline
