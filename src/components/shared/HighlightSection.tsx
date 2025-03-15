@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import { slides } from "@/assets/constants/highlightsData";
 import SectionHeading from "./SectionHeading";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "../ui/carousel";
@@ -10,8 +10,10 @@ export default function Highlights() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [hasPlayedOnce, setHasPlayedOnce] = useState(false);
 
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
 
   useEffect(() => {
@@ -31,27 +33,32 @@ export default function Highlights() {
   }, [api]);
 
   useEffect(() => {
-    if (isPlaying) {
-      // Start the interval to change the slide every 3 seconds
-      intervalRef.current = setInterval(() => {
-        setCurrentIndex((prevIndex) => {
-          const nextIndex = prevIndex + 1; // Calculate the next index
-          if (nextIndex < slides.length) {
-            api?.scrollTo(nextIndex); // Navigate to the next slide
-            return nextIndex; // Update currentIndex
-          } else {
-            // Stop autoplay when reaching the end
-            stopAutoplay();
-            return prevIndex; // Return the current index if at the last slide
-          }
-        });
-      }, 3000); // Adjust timing as needed
-    }
+    if (!api || isPlaying === false) return;
 
-    return () => {
-      clearInterval(intervalRef.current!); // Clean up on unmount or when isPlaying changes
-    };
-  }, [isPlaying, api]);
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1;
+        if (nextIndex < slides.length) {
+          api?.scrollTo(nextIndex);
+          return nextIndex;
+        } else {
+          stopAutoplay();
+          setHasPlayedOnce(true);
+          return prevIndex;
+        }
+      });
+    }, 7000); // 7 seconds per slide
+
+    return () => clearInterval(intervalRef.current!);
+  }, [api, isPlaying]);
+
+
+  useEffect(() => {
+    // Start autoplay on page load but only once
+    if (!hasPlayedOnce) {
+      setIsPlaying(true);
+    }
+  }, [hasPlayedOnce]);
 
   const stopAutoplay = () => {
     setIsPlaying(false);
@@ -59,17 +66,20 @@ export default function Highlights() {
   };
 
   const togglePlay = () => {
-    setIsPlaying((prev) => !prev);
-    if (!isPlaying) {
-      setCurrentIndex(0);
-      api?.scrollTo(0);
-    }
+    setIsPlaying((prev) => {
+      if (!prev) {
+        setCurrentIndex(0);
+        api?.scrollTo(0);
+        setHasPlayedOnce(true);
+      }
+      return !prev;
+    });
   };
 
 
   return (
     <section className="w-full relative min-h-screen bg-applengGray py-24 md:py-52">
-      <SectionHeading title="Get the highlights." />
+      <SectionHeading paddingbottom="pb-4" title="Get the highlights." />
       <div className="relative overflow-hidden">
         <Carousel
           setApi={setApi}
@@ -80,49 +90,52 @@ export default function Highlights() {
           }}
           className="w-full"
         >
-          <CarouselContent className="pt-8 pb-32 w-full md:max-w-5xl mx-auto lg:gap-16 md:gap-8">
+          <CarouselContent className="pb-32 w-full md:max-w-5xl mx-auto lg:gap-16 md:gap-8">
             <AnimatePresence>
               {slides.map((slide) => (
                 <CarouselItem
                   key={slide.id}
                   className={`md:basis-full lg:basis-[100%] aspect-square relative 
-                  md:aspect-video items-center justify-center`}>
-                  <motion.div
-                    role="tabpanel"
-                    id={`${slide.id}-panel`}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -20 }}
-                    transition={{ duration: 0.3 }}
-                    className="absolute inset-0 "
-                  >
-                    <div className="absolute inset-0 md:px-4">
-                      <div className="container relative h-full">
-                        <div
-                          className={`flex flex-col absolute top-0 left-0 right-0 md:right-auto md:max-w-2xl 
-                            rounded-lg p-4 md:p-8 shadow-lg gap-2 md:mx-0`}
-                        >
-                          <div className="text-white font-sf font-semibold">
-                            {slides[currentIndex].description.split('\n').map((line, i) => (
-                              <p key={i} className="text-[21px] md:text-3xl font-semibold">
-                                {line}
-                              </p>
-                            ))}
-                          </div>
+                    md:aspect-video items-center justify-center`}>
+                  <div className="absolute inset-0 md:px-4">
+                    <div className="container relative h-full">
+                      <div className={`flex flex-col absolute top-0 left-0 bg-black/20
+                         right-0 md:right-auto md:max-w-2xl rounded-lg p-4 md:p-8 shadow-lg gap-1 md:mx-0`}>
+                        <div className="text-white font-sf font-semibold">
+                          {slide.description.split('\n').map((line, i) => (
+                            <p key={i} className="text-[19px] md:text-[21px] lg:text-[28px] font-semibold">
+                              {line}
+                            </p>
+                          ))}
                         </div>
                       </div>
                     </div>
+                  </div>
+                  {slide.video ? (
+                    <video
+                      src={slide.video}
+                      autoPlay
+                      muted
+                      playsInline
+                      data-inline-media
+                      loop={false} // Stop looping to trigger onEnded
+                      onEnded={() => setIsVideoLoaded(true)}
+                      className={`w-full h-full object-cover rounded-none md:rounded-[28px] ${isVideoLoaded ? "opacity-100" : "opacity-100"
+                        }`}
+                    />
+                  ) : (
                     <img
-                      src={slides[currentIndex].image || "/placeholder.svg"}
+                      src={slide.image || "/placeholder.svg"}
                       alt=""
                       className="w-full h-full object-cover rounded-none md:rounded-[28px]"
+                      loading="lazy"
                     />
-                  </motion.div>
+                  )}
+
                 </CarouselItem>
               ))}
             </AnimatePresence>
           </CarouselContent>
-
 
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex items-center gap-2">
             <div className="p-4 md:p-6 bg-white/10 rounded-full flex gap-2">
@@ -131,15 +144,12 @@ export default function Highlights() {
                   key={index}
                   onClick={() => api?.scrollTo(index)}
                   className={`rounded-full transition-colors
-                 ${index === currentIndex ? "bg-white w-10 h-1.5" : "bg-white/30 w-2 h-2"}`}
+                    ${index === currentIndex ? "bg-white w-10 h-1.5" : "bg-white/30 w-2 h-2"}`}
                   aria-label={`Go to slide ${index + 1}`}
-
                 />
               ))}
             </div>
 
-
-            {/* Auto-play Toggle Button */}
             <button
               onClick={togglePlay}
               className="ml-2 p-2 md:p-4 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
@@ -149,7 +159,6 @@ export default function Highlights() {
           </div>
         </Carousel>
       </div>
-
     </section>
   );
 }

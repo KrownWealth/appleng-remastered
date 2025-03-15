@@ -1,5 +1,3 @@
-"use client";
-
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionHeadingInner from "./SectionHeadingInner";
@@ -28,7 +26,7 @@ const MacIphone = () => {
         {/* Right text section */}
         <div className="w-full md:w-1/2 flex flex-col gap-12 ps-6 pe-6 md:pe-0 md:ps-20 mt-6">
           {features.map((feature, index) => {
-            const ref = useRef(null);
+
             const isInView = useInView(ref, { margin: "-100px 0px -100px 0px" });
 
             return (

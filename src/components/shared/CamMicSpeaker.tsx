@@ -48,18 +48,20 @@ const CamMacSpeaker = () => {
 
       <CamMicSpeakerScroll />
 
-      <motion.div
-        ref={ref}
-        initial={{ opacity: 0, y: 50, scale: 0.9 }}
-        animate={
-          isInView
-            ? { opacity: 1, y: 0, scale: scale.get() }
-            : { opacity: 0, y: 50, scale: 0.9 }
-        }
-        transition={{ duration: 0.5, delay: 0.2 }}
+      <div
+
         className="w-full md:max-w-2xl items-center justify-start my-20 px-12"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28 font-sf ">
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          animate={
+            isInView
+              ? { opacity: 1, y: 0, scale: scale.get() }
+              : { opacity: 0, y: 50, scale: 0.9 }
+          }
+          transition={{ duration: 0.5, delay: 1 * 0.2 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-28 font-sf ">
           <div className="border-top flex flex-col">
             <div className="pt-8 pb-2">
               <source srcSet="/images/mic-speaker-small.png" type="image/png" media="(max-width:734px)" />
@@ -91,8 +93,8 @@ const CamMacSpeaker = () => {
               And Spatial Audio with support for Dolby Atmos creates an immersive sound experience.
             </p>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </section>
   );
 };

@@ -15,7 +15,12 @@ const PortsSection = () => {
       <SectionHeadingInner chipTitle="Ports and connectivity" title="Make powerful connections." />
 
       <div className="w-full md:w-[692px] lg:w-[980px] mx-auto relative ps-[8.3%] ">
-        <div className="text-textGray my-4 md:my-16 w-full md:max-w-[75%] font-sf text-[17px] md:text-xl font-semibold justify-start 
+        <motion.div
+          ref={ref}
+          initial={{ opacity: 0, y: 50, scale: 0.9 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.9 }}
+          transition={{ duration: 0.5, delay: 1 * 0.2 }}
+          className="text-textGray my-4 md:my-16 w-full md:max-w-[75%] font-sf text-[17px] md:text-xl font-semibold justify-start 
         text-start leading-snug tracking-[-0.011em] opacity-100">
           <p>
             <span className="text-white">Tens of thousands of apps are optimized</span>&nbsp;
@@ -28,19 +33,19 @@ const PortsSection = () => {
 
           </p>
           <p>MacBook Pro also supports both Wi‑Fi 6E51 and Bluetooth 5.3 to connect to the internet and your wireless devices.</p>
-        </div>
+        </motion.div>
       </div>
 
       <div className="w-full flex flex-col gap-12 my-12">
 
-        <picture className="relative ml-auto left-12 md:left-96 h-[59px]">
+        <picture className="relative ml-auto left-12 md:left-96 h-[59px] md:h-full">
           <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:734px)" />
           <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:1068px)" />
           <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:0)" />
           <img src="/images/port-1.jpg" alt="display" className="w-full h-full" />
         </picture>
 
-        <picture className="relative mr-auto right-12 md:right-96 h-[59px]">
+        <picture className="relative mr-auto right-12 md:right-96 h-[59px] md:h-full">
           <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:734px)" />
           <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:1068px)" />
           <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:0)" />

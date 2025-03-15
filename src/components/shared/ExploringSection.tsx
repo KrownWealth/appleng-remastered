@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionHeading from "./SectionHeading";
 
 const ExploringSection = () => {
   const [activeMacbookPro, setActiveMacbookPro] = useState(0);
@@ -6,12 +7,7 @@ const ExploringSection = () => {
 
   return (
     <section className="w-full mx-auto bg-appleGray flex flex-col pt-28 pb-60 px-6 lg:px-0">
-      <div className="max-w-5xl w-full items-start justify-start">
-        <h2 className="font-sf text-[32px] md:text-5xl lg:text-[56px]
-         text-white font-semibold text-start leading-[1.05] tracking-[-0.015em] mb-20">
-          Keep exploring Mac.
-        </h2>
-      </div>
+      <SectionHeading title="Keep exploring Mac." />
 
       <div className="w-full lg:w-[600px] mx-auto relative flex flex-col pt-12">
         <div className="flex gap-8 md:gap-12">

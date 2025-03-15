@@ -31,20 +31,17 @@ export default function AppleIntellScroll() {
       className="w-full my-20 z-50"
     >
       {/* Tab Content */}
-      <CarouselContent className="gap-8 md:gap-16 mx-auto max-w-[364px] h-[262px] md:max-w-4xl">
+      <CarouselContent className="w-full max-w-xs md:max-w-4xl mx-auto gap-4 md:gap-16">
         <AnimatePresence>
           {slides.map((tab, index) => (
             <CarouselItem
               key={tab.title}
-              className={` basis-full md:basis-1/2 lg:basis-[100%] `}
+              className={` basis-full md:basis-1/2 lg:basis-[100%]`}
               style={{ opacity: currentIndex === index ? 1 : 0.4 }}
             >
-              <picture>
-                <source srcSet={tab.img} type="image/jpg" media="(max-width:734px)" />
-                <source srcSet={tab.img} type="image/jpg" media="(max-width:1068px)" />
-                <source srcSet={tab.img} type="image/jpg" media="(max-width:0)" />
-                <img src={tab.img || "/placeholder.svg"} alt={tab.title} className="object-contain rounded-[28px]" />
-              </picture>
+
+              <img src={tab.img || "/placeholder.svg"} alt={tab.title} className="object-contain w-full h-full rounded-[28px]" />
+
             </CarouselItem>
           ))}
         </AnimatePresence>
