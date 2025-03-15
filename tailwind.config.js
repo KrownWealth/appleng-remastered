@@ -6,6 +6,8 @@ module.exports = {
     extend: {
       animation: {
         fadeIn: "fadein 2s ease-out forwards",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -58,12 +60,30 @@ module.exports = {
       },
       fontFamily: {
         sf: [
-          '"SF Pro Display",',
-          '"Helvetica Neue",',
+          'SF Pro Display",',
+          'Helvetica Neue",',
           "Helvetica,",
           "Arial,",
           "sans-serif",
-        ].join(" "),
+        ],
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
       },
     },
   },
