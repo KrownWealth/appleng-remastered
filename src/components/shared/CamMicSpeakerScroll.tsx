@@ -1,6 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "../ui/carousel";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
 
 
 
@@ -40,10 +49,11 @@ export default function CamMicSpeakerScroll() {
               style={{ opacity: currentIndex === index ? 1 : 0.4 }}
             >
               <picture>
-                <source srcSet={tab.img} type="image/jpg" media="(max-width:734px)" />
-                <source srcSet={tab.img} type="image/jpg" media="(max-width:1068px)" />
-                <source srcSet={tab.img} type="image/jpg" media="(max-width:0)" />
-                <img src={tab.img || "/placeholder.svg"} alt={tab.title} className="object-contain rounded-[28px]" />
+                <AdvancedImage
+                  cldImg={cld.image(tab.img || "/placeholder.svg")}
+                  className="object-contain rounded-[28px]"
+                  loading="lazy"
+                />
               </picture>
             </CarouselItem>
           ))}
@@ -83,12 +93,12 @@ export default function CamMicSpeakerScroll() {
 const slides = [
   {
     title: "Center Stage",
-    img: "/images/micspeaker-1.jpg",
+    img: "apple-remastered/images/micspeaker-1_zpeuwz",
     description: "Center Stage keeps you centered in the frame as you move around."
   },
   {
     title: "Desk View ",
-    img: "/images/micspeaker-2.jpg",
+    img: "apple-remastered/images/micspeaker-2_q609fu",
     description: "Desk View lets you share your workspace, adding a whole new dimension to make your video calls more engaging."
   },
 

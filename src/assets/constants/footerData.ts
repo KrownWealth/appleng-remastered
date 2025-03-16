@@ -71,19 +71,23 @@ export const footnotes = [
   },
   {
     id: "footnote-8",
-    text: "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, and production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, all configured with 2TB SSD. Prerelease Blender 4.2.2 tested by rendering a 403.9 MB 3D scene utilizing hardware-accelerated ray tracing on systems with M4 and M3. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
+    content:
+      "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, and production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, all configured with 2TB SSD. Prerelease Blender 4.2.2 tested by rendering a 403.9 MB 3D scene utilizing hardware-accelerated ray tracing on systems with M4 and M3. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
     id: "footnote-9",
-    text: "Testing conducted by Apple August through October 2024 using preproduction 16-inch MacBook Pro systems with Apple M4 Max, 16-core CPU, 40-core GPU, 128GB of RAM, and 4TB SSD, and production 16-inch MacBook Pro systems with Apple M1 Max, 10-core CPU, 32-core GPU, 64GB of RAM, and 8TB SSD. Prerelease Redshift v2025.0.0 tested using a 29.2MB scene utilizing hardware-accelerated ray tracing on systems with M4 Max and M3 Max. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
+    content:
+      "Testing conducted by Apple August through October 2024 using preproduction 16-inch MacBook Pro systems with Apple M4 Max, 16-core CPU, 40-core GPU, 128GB of RAM, and 4TB SSD, and production 16-inch MacBook Pro systems with Apple M1 Max, 10-core CPU, 32-core GPU, 64GB of RAM, and 8TB SSD. Prerelease Redshift v2025.0.0 tested using a 29.2MB scene utilizing hardware-accelerated ray tracing on systems with M4 Max and M3 Max. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
     id: "footnote-10",
-    text: "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, and production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, all configured with 2TB SSD. Prerelease Blender 4.2.2 tested by rendering a 403.9 MB 3D scene utilizing hardware-accelerated ray tracing on systems with M4. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
+    content:
+      "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, and production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, all configured with 2TB SSD. Prerelease Blender 4.2.2 tested by rendering a 403.9 MB 3D scene utilizing hardware-accelerated ray tracing on systems with M4. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
     id: "footnote-11",
-    text: "Testing conducted by Apple August through October 2024 using preproduction 16-inch MacBook Pro systems with Apple M4 Pro, 14-core CPU, 20-core GPU, 48GB of RAM, and 4TB SSD, and production 16-inch MacBook Pro systems with Apple M1 Pro, 10-core CPU, 16-core GPU, 32GB of RAM, and 8TB SSD. Prerelease Redshift v2025.0.0 tested using a 29.2MB scene utilizing hardware-accelerated ray tracing on systems with M4 Pro. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
+    content:
+      "Testing conducted by Apple August through October 2024 using preproduction 16-inch MacBook Pro systems with Apple M4 Pro, 14-core CPU, 20-core GPU, 48GB of RAM, and 4TB SSD, and production 16-inch MacBook Pro systems with Apple M1 Pro, 10-core CPU, 16-core GPU, 32GB of RAM, and 8TB SSD. Prerelease Redshift v2025.0.0 tested using a 29.2MB scene utilizing hardware-accelerated ray tracing on systems with M4 Pro. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
     id: "footnote-12",
@@ -92,22 +96,22 @@ export const footnotes = [
   },
   {
     id: "footnote-13",
-    description:
+    content:
       "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 14-inch MacBook Pro systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.7GHz quad-core Intel Core i7-based 13-inch MacBook Pro systems with Intel Iris Plus Graphics 645 and 16GB of RAM, all configured with 2TB SSD. Topaz Video AI v5.3.2 tested by applying 2x slow motion to a 45-second 1920x800 H.264 video file. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
     id: "footnote-14",
-    description:
+    content:
       "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 14-inch MacBook Pro systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.7GHz quad-core Intel Core i7-based 13-inch MacBook Pro systems with Intel Iris Plus Graphics 645 and 16GB of RAM, all configured with 2TB SSD. Prerelease World of Warcraft: The War Within v11.0.5.56695 tested at 2217x1440 resolution on 14-inch systems, and 2048x1280 resolution on 13-inch systems, with graphics slider set to 4. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
     id: "footnote-15",
-    description:
+    content:
       "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 14-inch MacBook Pro systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.7GHz quad-core Intel Core i7-based 13-inch MacBook Pro systems with Intel Iris Plus Graphics 645 and 16GB of RAM, all configured with 2TB SSD. Prerelease Blender 4.2.2 tested by rendering a 403.9 MB 3D scene utilizing hardware-accelerated ray tracing on systems with M4 and M3. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
     id: "footnote-16",
-    description:
+    content:
       "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 14-inch MacBook Pro systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.7GHz quad-core Intel Core i7-based 13-inch MacBook Pro systems with Intel Iris Plus Graphics 645 and 16GB of RAM, all configured with 2TB SSD. Adobe Premiere Pro 2024 v24.6.1 tested with Scene Edit Detection using a 3-minute and 27-second project with H.264 media at 3840x2160 resolution and 30 frames per second. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {
@@ -117,7 +121,7 @@ export const footnotes = [
   },
   {
     id: "footnote-18",
-    description:
+    content:
       "Testing conducted by Apple August through October 2024 using preproduction 14-inch MacBook Pro systems with Apple M4, 10-core CPU, 10-core GPU, and 32GB of RAM, production 14-inch MacBook Pro systems with Apple M3, 8-core CPU, 10-core GPU, and 24GB of RAM, production 13-inch MacBook Pro systems with Apple M1, 8-core CPU, 8-core GPU, and 16GB of RAM, and production 1.7GHz quad-core Intel Core i7-based 13-inch MacBook Pro systems with Intel Iris Plus Graphics 645 and 16GB of RAM, all configured with 2TB SSD. Tested with MATLAB and Simulink R2024b v24.2.0.2712019 and Parallel Computing Toolbox using a vehicle dynamics model. Performance tests are conducted using specific computer systems and reflect the approximate performance of MacBook Pro.",
   },
   {

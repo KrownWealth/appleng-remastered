@@ -2,17 +2,27 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, CarouselApi } from "../ui/carousel";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
+
 
 const tabs = [
-  { id: "xcode", label: "Coding", image: "/images/carousel/carousel-1.jpg" },
-  { id: "photo-editing", label: "Photo Editing", image: "/images/carousel/carousel-2.jpg" },
-  { id: "stem", label: "STEM", image: "/images/carousel/carousel-3.jpg" },
-  { id: "business", label: "Business", image: "/images/carousel/carousel-4.jpg" },
-  { id: "graphic-design", label: "Graphic design", image: "/images/carousel/carousel-5.jpg" },
-  { id: "3d-animation-and-design", label: "3D animation and design", image: "/images/carousel/carousel-6.jpg" },
-  { id: "music-production", label: "Music production", image: "/images/carousel/carousel-7.jpg" },
-  { id: "video-editing", label: "Video editing", image: "/images/carousel/carousel-8.jpg" },
-  { id: "gaming", label: "Gaming", image: "/images/carousel/carousel-9.jpg" },
+  { id: "xcode", label: "Coding", image: "apple-remastered/images/carousel-1_iz6bzj" },
+  { id: "photo-editing", label: "Photo Editing", image: "apple-remastered/images/carousel-2_xltijl" },
+  { id: "stem", label: "STEM", image: "apple-remastered/images/carousel-3_fszkjw" },
+  { id: "business", label: "Business", image: "apple-remastered/images/carousel-4_szrhpf" },
+  { id: "graphic-design", label: "Graphic design", image: "apple-remastered/images/carousel-5_expgc8" },
+  { id: "3d-animation-and-design", label: "3D animation and design", image: "apple-remastered/images/carousel-6_stxa8m" },
+  { id: "music-production", label: "Music production", image: "apple-remastered/images/carousel-7_ufy6jq" },
+  { id: "video-editing", label: "Video editing", image: "apple-remastered/images/carousel-8_hejdmg" },
+  { id: "gaming", label: "Gaming", image: "apple-remastered/images/carousel-9_dvbbe0" },
 ];
 
 export default function HorizontalScroll() {
@@ -77,7 +87,11 @@ export default function HorizontalScroll() {
                           WebkitMaskPosition: "center",
                         }}
                       >
-                        <img src={tab.image || "/placeholder.svg"} alt={tab.label} className="object-contain" />
+                        <AdvancedImage
+                          cldImg={cld.image(tab.image || "/placeholder.svg")}
+                          className="object-contain"
+                          loading="lazy"
+                        />
                       </div>
                       <img
                         src="/images/mockup-screen.jpg"

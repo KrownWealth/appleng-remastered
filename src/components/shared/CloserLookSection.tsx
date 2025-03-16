@@ -4,6 +4,17 @@ import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "../ui/caro
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import SectionHeading from "./SectionHeading";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
+
+
 
 export default function CloserLookSection() {
   const [api, setApi] = useState<CarouselApi>();
@@ -107,9 +118,8 @@ export default function CloserLookSection() {
                 <CarouselItem
                   key={index}
                   className={`basis-full relative items-center justify-center `}>
-                  <img
-                    src={slide.image || "/placeholder.svg"}
-                    alt=""
+                  <AdvancedImage
+                    cldImg={cld.image(slide.image || "placeholder")}
                     className="w-full h-full object-cover rounded-none md:rounded-[28px]"
                     loading="lazy"
                   />

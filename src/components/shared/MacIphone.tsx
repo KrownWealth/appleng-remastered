@@ -1,6 +1,16 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionHeadingInner from "./SectionHeadingInner";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
+
 
 
 
@@ -16,10 +26,11 @@ const MacIphone = () => {
         {/* Left presentation */}
         <div className="w-full lg:w-1/2 flex justify-start">
           <picture className="relative -left-60 md:-left-[26rem] block">
-            <source srcSet="/images/mac-iphone.jpg" type="image/jpg" media="(max-width:734px)" />
-            <source srcSet="/images/mac-iphone.jpg" type="image/jpg" media="(max-width:1068px)" />
-            <source srcSet="/images/mac-iphone.jpg" type="image/jpg" media="(max-width:0)" />
-            <img src="/images/mac-iphone.jpg" alt="Mac + iPhone" className="w-auto h-auto max-w-[150%] max-h-[150%] object-cover" />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/mac-iphone_vtb7jh")}
+              className="w-auto h-auto max-w-[150%] max-h-[150%] object-cover"
+              loading="lazy"
+            />
           </picture>
         </div>
 

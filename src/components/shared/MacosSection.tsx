@@ -4,6 +4,7 @@ import SectionHeadingInner from "./SectionHeadingInner";
 import { motion, useInView } from "framer-motion";
 
 
+
 const MacosSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { margin: "-100px 0px -100px 0px" });

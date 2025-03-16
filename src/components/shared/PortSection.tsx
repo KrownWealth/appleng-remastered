@@ -1,6 +1,16 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import SectionHeadingInner from "./SectionHeadingInner";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
+
 
 
 const PortsSection = () => {
@@ -39,17 +49,19 @@ const PortsSection = () => {
       <div className="w-full flex flex-col gap-12 my-12">
 
         <picture className="relative ml-auto left-12 md:left-96 h-[59px] md:h-full">
-          <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:734px)" />
-          <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:1068px)" />
-          <source srcSet="/images/port-1.jpg" type="image/jpg" media="(max-width:0)" />
-          <img src="/images/port-1.jpg" alt="display" className="w-full h-full" />
+          <AdvancedImage
+            cldImg={cld.image("apple-remastered/images/port-1_nmaupy")}
+            className="w-full h-full"
+            loading="lazy"
+          />
         </picture>
 
         <picture className="relative mr-auto right-12 md:right-96 h-[59px] md:h-full">
-          <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:734px)" />
-          <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:1068px)" />
-          <source srcSet="/images/port-2.jpg" type="image/jpg" media="(max-width:0)" />
-          <img src="/images/port-2.jpg" alt="display" className="w-full h-full" />
+          <AdvancedImage
+            cldImg={cld.image("apple-remastered/images/port-2_pkvfrw")}
+            className="w-full h-full"
+            loading="lazy"
+          />
         </picture>
 
       </div>

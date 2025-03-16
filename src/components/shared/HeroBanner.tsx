@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedVideo } from "@cloudinary/react";
 
 
 const cld = new Cloudinary({
@@ -34,26 +35,26 @@ export default function Hero() {
 
         {/* Welcome video Mobile */}
         <div className="block md:hidden relative translate-y-[-30px] items-center -mt-8">
-          <video
+          <AdvancedVideo
             autoPlay
             muted
             playsInline
             loop={false}
             onEnded={() => setIsVideoLoaded(true)}
-            src={cld.video("apple-remastered/videos/hero-mobile-video_lvvqjo").toURL()}
+            cldVid={cld.video("apple-remastered/videos/hero-mobile-video_lvvqjo")}
             className={`w-full h-full object-cover transition-opacity duration-700 ${isVideoLoaded ? "opacity-100" : "opacity-100"}`}
           />
         </div>
 
         {/* Welcome video desktop */}
         <div className="hidden md:block heroVideo relative mt-16 translate-y-[-30px]">
-          <video
+          <AdvancedVideo
             autoPlay
             muted
             playsInline
             loop={false}
             onEnded={() => setIsVideoLoaded(true)}
-            src={cld.video("apple-remastered/videos/hero-video_lvfsm4").quality("auto").toURL()}
+            cldVid={cld.video("apple-remastered/videos/hero-video_lvfsm4").quality("auto")}
             className={`w-full h-full object-cover transition-opacity duration-500 ${isVideoLoaded ? "opacity-100" : "opacity-100"}`}
           />
         </div>

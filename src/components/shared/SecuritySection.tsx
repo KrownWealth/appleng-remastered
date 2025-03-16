@@ -1,6 +1,16 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import SectionHeadingInner from "./SectionHeadingInner";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
+
 
 
 
@@ -32,10 +42,11 @@ const SecuritySection = () => {
 
       <div className="flex items-center justify-center mx-auto w-[342px] h-[210px] md:w-3/4 mb-32 mt-8 md:mt-20">
         <picture>
-          <source srcSet="/images/security-2.jpg" type="image/jpg" media="(max-width:734px)" />
-          <source srcSet="/images/security-2.jpg" type="image/jpg" media="(max-width:1068px)" />
-          <source srcSet="/images/security-2.jpg" type="image/jpg" media="(max-width:0)" />
-          <img src="/images/security-2.jpg" alt="display" className="w-full h-full  object-cover" />
+          <AdvancedImage
+            cldImg={cld.image("apple-remastered/images/security-2_qnfmeb")}
+            className="w-full h-full  object-cover"
+            loading="lazy"
+          />
         </picture>
 
       </div>

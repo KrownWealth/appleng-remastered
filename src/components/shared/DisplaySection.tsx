@@ -2,6 +2,17 @@ import { motion, useInView, } from "framer-motion";
 import { Plus } from "lucide-react";
 import { useRef } from "react";
 import SectionHeadingInner from "./SectionHeadingInner";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
+
+
 
 
 
@@ -18,10 +29,11 @@ const DisplaySection = () => {
       <div className="flex items-center justify-center mx-auto aspect-video md:w-[40%] relative -left-20 md:-left-0 mt-0 md:mt-8">
         <figure>
           <picture>
-            <source srcSet="/images/display-1.jpg" type="image/jpg" media="(max-width:734px)" />
-            <source srcSet="/images/display-1.jpg" type="image/jpg" media="(max-width:1068px)" />
-            <source srcSet="/images/display-1.jpg" type="image/jpg" media="(max-width:0)" />
-            <img src="/images/display-1.jpg" alt="display" className="w-full h-full  " />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/display-1_epjpst")}
+              className="w-full h-full"
+              loading="lazy"
+            />
           </picture>
         </figure>
       </div>
@@ -45,10 +57,11 @@ const DisplaySection = () => {
         <div className="flex items-center justify-center mx-auto w-full md:w-[55%] h-[300px] md:h-[480px] ">
           <figure>
             <picture>
-              <source srcSet="/images/display-2.jpg" type="image/jpg" media="(max-width:734px)" />
-              <source srcSet="/images/display-2.jpg" type="image/jpg" media="(max-width:1068px)" />
-              <source srcSet="/images/display-2.jpg" type="image/jpg" media="(max-width:0)" />
-              <img src="/images/display-2.jpg" alt="display" className="w-full h-full rounded-[28px]" />
+              <AdvancedImage
+                cldImg={cld.image("apple-remastered/images/display-2_a83jte")}
+                className="w-full h-full rounded-[28px]"
+                loading="lazy"
+              />
             </picture>
             <figcaption className="flex justify-center md:justify-end text-textGray text-[10px] md:text-sm font-sf py-1">MacBook Pro with nano-texture display</figcaption>
           </figure>

@@ -2,6 +2,15 @@ import { Plus } from "lucide-react"
 import SectionHeadingInner from "./SectionHeadingInner"
 import { useState, useEffect, useRef } from "react"
 import { motion, useInView } from "framer-motion";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage, AdvancedVideo } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
 
 
 
@@ -29,13 +38,13 @@ const PerformanceSection = () => {
         <div className="performance-card w-full md:max-w-6xl h-[600px] mx-auto">
           {showVideo ?
             (
-              <video
+              <AdvancedVideo
                 autoPlay
                 muted
-                loop
-                src="/video/large-shadow-trasparet.mp4"
-                className={`w-full h-full object-cover transition-opacity duration-500 "
-                  }`}
+                playsInline
+                loop={false}
+                cldVid={cld.video("apple-remastered/videos/large-shadow-trasparet_fpzder")}
+                className={`w-full h-full object-cover transition-opacity duration-500`}
               />
             ) :
             (<picture className="w-full">
@@ -113,10 +122,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6 }}
             className="absolute md:hidden flex items-center justify-center w-[70%] z-20 top-[-170px]"
           >
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-1.jpg" alt="M4 Chip" className="w-full rounded-[48px]" />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen-blender-1_ckj8xf")}
+              alt="M4 Chip"
+              className="w-full rounded-[48px]"
+            />
           </motion.picture>
 
 
@@ -126,10 +136,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6 }}
             className="hidden md:flex items-center justify-center w-[80%] z-20"
           >
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-1.jpg" type="image/jpg" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-1.jpg" alt="M4 Chip" className="w-full rounded-[48px]" />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen-blender-1_ckj8xf")}
+              alt="M4 Chip"
+              className="w-full rounded-[48px]"
+            />
           </motion.picture>
 
 
@@ -139,11 +150,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="absolute top-[-280px] md:top-[-160px] -right-12 md:right-[-300px] w-36 md:w-[45%] z-30"
           >
-            <source srcSet="/images/performance/performance-screen-blender-2.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-2.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-2.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-2.png" alt="M4 Chip"
-              className="w-full " />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen-blender-2_ujxc6x")}
+              alt="M4 Chip"
+              className="w-full"
+            />
           </motion.picture>
 
           <motion.picture
@@ -152,11 +163,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="absolute top-[-350px] -left-10 md:left-[-100px] w-[50%] z-10"
           >
-            <source srcSet="/images/performance/performance-screen-blender-3.jpg" type="image/jpg" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-3.jpg" type="image/jpg" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-3.jpg" type="image/jpg" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-3.jpg" alt="M4 Chip"
-              className="w-full " />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen-blender-3_wjm3ep")}
+              alt="M4 Chip"
+              className="w-full"
+            />
           </motion.picture>
 
           <motion.picture
@@ -165,10 +176,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="absolute bottom-[-50px] md:bottom-[-100px] -left-24  md:left-[-400px] w-36 md:w-[55%] z-50"
           >
-            <source srcSet="/images/performance/performance-screen-blender-4.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-4.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-4.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-4.png" alt="M4 Chip" className="w-full" />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen-blender-4_dyxpnf")}
+              alt="M4 Chip"
+              className="w-full"
+            />
           </motion.picture>
 
 
@@ -181,10 +193,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="absolute bottom-0 md:bottom-[-100px] -right-20  md:right-[-400px] w-36 md:w-[55%] z-50 md:z-10"
           >
-            <source srcSet="/images/performance/performance-screen-blender-5.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-5.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-5.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-5.png" alt="M4 Chip" className="w-full" />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen-blender-5_ow3avd")}
+              alt="M4 Chip"
+              className="w-full"
+            />
           </motion.picture>
 
           <motion.picture
@@ -194,10 +207,11 @@ const PerformanceSection = () => {
 
             className="absolute top-[-320px] md:top-[-250px] right-10 w-36 md:w-[40%] z-50 border-one"
           >
-            <source srcSet="/images/performance/performance-screen.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen.png" alt="M4 Chip" className="w-full " />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen_qyaylx")}
+              alt="M4 Chip"
+              className="w-full"
+            />
           </motion.picture>
 
           <motion.picture
@@ -206,10 +220,11 @@ const PerformanceSection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="absolute -top-40 md:top-10 -left-24 md:left-[-280px] w-40 md:w-[40%] z-50 md:z-20"
           >
-            <source srcSet="/images/performance/performance-screen-blender-7.png" type="image/png" media="(max-width: 734px)" />
-            <source srcSet="/images/performance/performance-screen-blender-7.png" type="image/png" media="(max-width: 1068px)" />
-            <source srcSet="/images/performance/performance-screen-blender-7.png" type="image/png" media="(min-width: 0)" />
-            <img src="/images/performance/performance-screen-blender-7.png" alt="M4 Chip" className="w-full " />
+            <AdvancedImage
+              cldImg={cld.image("apple-remastered/images/performance-screen-blender-7_n6brzw")}
+              alt="M4 Chip"
+              className="w-full"
+            />
           </motion.picture>
 
         </div>

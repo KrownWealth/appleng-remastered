@@ -1,6 +1,16 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useInView } from "framer-motion";
 import SectionHeadingInner from "./SectionHeadingInner";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
+
 
 const BatterySection = () => {
 
@@ -24,16 +34,13 @@ const BatterySection = () => {
         className="w-full py-16 overflow-hidden"
         style={{ scale }}
       >
-        <picture>
-          <source srcSet="/images/battery-hero.jpg" type="image/jpg" media="(max-width: 734px)" />
-          <source srcSet="/images/battery-hero.jpg" type="image/jpg" media="(max-width: 1068px)" />
-          <source srcSet="/images/battery-hero.jpg" type="image/jpg" media="(min-width: 0)" />
-          <img
-            src="/images/battery-hero.jpg"
-            alt="MacBook Pro with colorful keyboard lighting"
-            className="w-full h-[600px] md:h-auto object-cover"
-          />
-        </picture>
+
+        <AdvancedImage
+          cldImg={cld.image("apple-remastered/images/battery-hero_ocprca")}
+          className="w-full h-[600px] md:h-auto object-cover"
+          loading="lazy"
+        />
+
       </motion.div>
 
       <div className="max-w-[692px] mx-auto mt-12 px-6 md:px-0">

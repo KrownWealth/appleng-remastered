@@ -4,6 +4,15 @@ import { slides } from "@/assets/constants/highlightsData";
 import SectionHeading from "./SectionHeading";
 import { Carousel, CarouselContent, CarouselItem, CarouselApi } from "../ui/carousel";
 import { Play } from "lucide-react";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedVideo, AdvancedImage } from "@cloudinary/react";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
 
 export default function Highlights() {
   const [api, setApi] = useState<CarouselApi>();
@@ -112,26 +121,23 @@ export default function Highlights() {
                     </div>
                   </div>
                   {slide.video ? (
-                    <video
-                      src={slide.video}
+                    <AdvancedVideo
                       autoPlay
                       muted
                       playsInline
-                      data-inline-media
-                      loop={false} // Stop looping to trigger onEnded
+                      loop={false}
                       onEnded={() => setIsVideoLoaded(true)}
-                      className={`w-full h-full object-cover rounded-none md:rounded-[28px] ${isVideoLoaded ? "opacity-100" : "opacity-100"
+                      cldVid={cld.video(slide.video)}
+                      className={`w-full h-full object-cover transition-opacity duration-700 ${isVideoLoaded ? "opacity-100" : "opacity-100"
                         }`}
                     />
                   ) : (
-                    <img
-                      src={slide.image || "/placeholder.svg"}
-                      alt=""
+                    <AdvancedImage
+                      cldImg={cld.image(slide.image || "placeholder")}
                       className="w-full h-full object-cover rounded-none md:rounded-[28px]"
                       loading="lazy"
                     />
                   )}
-
                 </CarouselItem>
               ))}
             </AnimatePresence>

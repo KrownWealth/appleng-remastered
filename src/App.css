@@ -416,8 +416,24 @@
 }
 
 
+.footer-list li a {
+  color: white;
+  text-decoration: underline;
+  opacity: .75;
+}
 
 
+.footer-image-mask{
+  width: 14px;
+    height: 18px;
+    display: block;
+    position: relative;
+    z-index: 2;
+    color: rgba(0, 0, 0, 0);
+  mask-image: url("/images/logo-mask.svg");
+  background-color: rgba(255, 255, 255, .8);
+  color: white;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   /* Mobile styles */
