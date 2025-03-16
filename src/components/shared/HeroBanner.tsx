@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { Cloudinary } from "@cloudinary/url-gen";
+
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: "dtainagml",
+  },
+});
 
 export default function Hero() {
   const [isVideoLoaded, setIsVideoLoaded] = useState(false);
-
 
 
   return (
@@ -27,38 +34,28 @@ export default function Hero() {
 
         {/* Welcome video Mobile */}
         <div className="block md:hidden relative translate-y-[-30px] items-center -mt-8">
-
           <video
-            src="/video/hero-mobile-video.mp4"
             autoPlay
             muted
             playsInline
-            data-inline-media
-            loop={false} // Stop looping to trigger onEnded
+            loop={false}
             onEnded={() => setIsVideoLoaded(true)}
-            className={`w-full h-full object-cover transition-opacity duration-700 ${isVideoLoaded ? "opacity-100" : "opacity-100"
-
-              }`}
+            src={cld.video("apple-remastered/videos/hero-mobile-video_lvvqjo").toURL()}
+            className={`w-full h-full object-cover transition-opacity duration-700 ${isVideoLoaded ? "opacity-100" : "opacity-100"}`}
           />
-
-
         </div>
 
         {/* Welcome video desktop */}
         <div className="hidden md:block heroVideo relative mt-16 translate-y-[-30px]">
-
           <video
-            src="/video/hero-video.mp4"
             autoPlay
             muted
             playsInline
-            data-inline-media
             loop={false}
             onEnded={() => setIsVideoLoaded(true)}
+            src={cld.video("apple-remastered/videos/hero-video_lvfsm4").quality("auto").toURL()}
             className={`w-full h-full object-cover transition-opacity duration-500 ${isVideoLoaded ? "opacity-100" : "opacity-100"}`}
-          > </video>
-
-
+          />
         </div>
 
         <div className="duration-2000 fade-in-5 fill-mode-forwards ease-in-out opacity-0" />

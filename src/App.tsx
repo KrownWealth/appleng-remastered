@@ -16,7 +16,11 @@ import UpgradeSection from './components/shared/UpgradeSection'
 import DifferenceSection from './components/shared/DifferenceSection'
 import ExploringSection from './components/shared/ExploringSection'
 
+
 function App() {
+
+
+
   return (
     <main className="overflow-hidden">
       <Hero />
