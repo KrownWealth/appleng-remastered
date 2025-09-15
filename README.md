@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# 🍏 Apple Website Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **clone of the Apple Nigeria website** built with **Vite + React**, focusing on smooth **animations**, **responsive design**, and the **sophisticated look and feel** of Apple’s website.
 
-Currently, two official plugins are available:
+All images are optimized and served via **Cloudinary** for performance, and the project is deployed on **Vercel**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+* 🎨 Modern UI inspired by Apple Nigeria website
+* ⚡ Built with **Vite** for fast development and optimized builds
+* ✨ Smooth animations using **Framer Motion** & CSS transitions
+* 📱 Fully responsive across devices
+* ☁️ Cloudinary image hosting for fast delivery
+* 🌍 Deployed on **Vercel** with custom domain support
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🛠️ Tech Stack
+
+* **Vite** (React + TypeScript)
+* **Tailwind CSS** for styling
+* **Framer Motion** for animations
+* **Cloudinary** for media hosting
+* **Vercel** for deployment
+
+---
+
+## 📷 Screenshots<img width="1380" height="793" alt="Apple-Remaster" src="https://github.com/user-attachments/assets/4a15dbdf-32f0-480e-a592-fe3b1441df7c" />
+
+
+---
+
+## ⚡ Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/yKrownWealth/appleng-remastered.git
+cd appleng-remastered
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Run the development server
+
+```bash
+npm run dev
+```
+
+### 4. Build for production
+
+```bash
+npm run build
+```
+
+---
+
+## 🌍 Deployment
+
+The project is live on **Vercel**:
+👉 [View Demo](https://appleng-remastered.vercel.app/)
+
+---
+
+## 📌 Notes
+
+* This project is for **educational purposes only**.
+* All rights to design and brand assets belong to **Apple**.
+
+---
+
+## 👨‍💻 Author
+
+**Adeola Abdulramon**
